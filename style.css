@@ -63,6 +63,7 @@ justify-content: space-between; /* Align grid items to the start of the containe
 .hidden-sorting-search{
     border: 2px solid red;
     align-items: start;
+    margin : 0 ; 
 }
 
 
