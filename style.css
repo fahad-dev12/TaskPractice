@@ -1,0 +1,80 @@
+body {
+  background-color: antiquewhite;
+  direction: rtl;
+}
+
+/* buttons styling */
+button{
+    background-color: green;
+    color: white;
+ 
+}
+
+.hidden-sorting-reset{
+background-color: white;
+color: blue;
+border: 1px solid blue;
+}
+
+
+
+
+/* hidden filter-section styling */
+.hidden-sorting{
+width: 70%;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+margin: 12px ;
+border: 5px solid blue;
+}
+.hidden-sorting button{
+    grid-column: 3/4;
+    width: 50px;
+    margin:    10px ;    /* Add margin between buttons */
+    
+}
+
+.hidden-sorting h2 , h3 {
+    grid-column: 1/4;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* table styling */
+.table-section{
+    width: 70%;
+    border: 5px solid red;
+}
+table {
+  direction: rtl;
+  text-align: right;
+  counter-reset: none;
+  align-self: center;
+  width: 100%;
+}
+th {
+    cursor: pointer;
+    
+  }
+thead {
+  background-color: green;
+  color: white;
+  text-align: right;
+}
+tbody tr {
+  counter-increment: rowNumber; /*  counter for each row */
+}
+tbody tr::before {
+  content: counter(rowNumber); /* Display the counter content before each row */
+  display: table-cell; /* Make it behave like a table cell */
+  /* text-align: center; Center the content */
+}
+td {
+  border: 2px solid black;
+}
+
+td time:last-child{
+    display: block;
+    color: gray;
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <header>
+      <h1>
+        <a href=""
+          ><span class="fa-solid fa-terminal" aria-hidden="true"></span>
+          <span>اعتماد</span>
+        </a>
+      </h1>
+
+      <div>
+        <a href="">موظف إدارة الاشتراكات</a>
+        <a href="">دعم الاعمال </a>
+        <h4 class="user-name">خالد عبدالله الصافي</h4>
+      </div>
+      <div>
+        <button>messages icon</button>
+        <button>bill icon</button>
+        <button>settings icon</button>
+        <button>منتجات اعتماد</button>
+      </div>
+    </header>
+    <br />
+    <div>
+      <h1>some components</h1>
+    </div>
+    <br />
+
+    <section class="page-title">
+      <button class="create-new">إانشاء نموذج باقة جديدة +</button>
+      <h2 id="page-title-h2">إدارة الباقات(يتغير)</h2>
+    </section>
+    <hr />
+
+    <button
+      class="hidden-sorting-showingbutton"
+      style="width: 90px; height: 20px"
+    >
+      icon to show
+    </button>
+    <!--needs to add event listener to show hidden section when presses-->
+    <section class="hidden-sorting">
+      <button class="hidden-sorting-closingbutton">icon to hide</button>
+      <h2 class="title">التصفية</h2>
+
+      <h3>التصفيات النشطة</h3>
+      
+      <div class="arabic-form">
+        <h4>اسم النموذج باللغة العربية</h4>
+        <input
+          type="text"
+          id="name-of-form-ar"
+          placeholder="ابحث بإسم الباقة بالعربية "
+        />
+      </div>
+      <div class="english-form">
+        <h4>اسم النموذج باللغة الإنجليزية</h4>
+        <input
+          type="text"
+          id="name-of-form-en"
+          placeholder="ابحث بإسم الباقة بالإنجليزية "
+        />
+      </div>
+
+      <button class="hidden-sorting-search">بحث</button>
+      <button class="hidden-sorting-reset">إعادة التعيين</button>
+    </section>
+
+    <section class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>اسم النموذج باللغة العربية</th>
+            <th>اسم النموذج باللغة الإنجليزية</th>
+            <th>تاريخ ووقت الانشاء</th>
+            <th>" "</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>الباقة الاساسية</td>
+            <td>small entity package</td>
+            <td>
+              <time class="date" datetime="01-01-2022">01-01-2022</time>
+              <time class="time" datetime="2.31pm">2.31م</time>
+            </td>
+            <td>Temp</td>
+          </tr>
+          <tr>
+            <td>الباقة الاساسية</td>
+            <td>small entity package</td>
+            <td>
+              <time class="date" datetime="01-01-2022">01-01-2022</time>
+              <time class="time" datetime="2.31pm">2.31م</time>
+            </td>
+            <td>Temp</td>
+          </tr>
+          <tr>
+            <td>الباقة الاساسية</td>
+            <td>small entity package</td>
+            <td>
+              <time class="date" datetime="01-01-2022">01-01-2022</time>
+              <time class="time" datetime="2.31pm">2.31م</time>
+            </td>
+            <td>Temp</td>
+          </tr>
+          <tr>
+            <td>الباقة الاساسية</td>
+            <td>small entity package</td>
+            <td>
+              <time class="date" datetime="01-01-2022">01-01-2022</time>
+              <time class="time" datetime="2.31pm">2.31م</time>
+            </td>
+            <td>Temp</td>
+          </tr>
+          <tr>
+            <td>الباقة الاساسية</td>
+            <td>small entity package</td>
+            <td>
+              <time class="date" datetime="01-01-2022">01-01-2022</time>
+              <time class="time" datetime="2.31pm">2.31م</time>
+            </td>
+            <td>Temp</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      <section>
+        <h2>جميع الحقوق محفوظة لوزارة المالية - اعتماد ا2021</h2>
+        <p>تحتاج مساعدة؟ 1990 | البوابة الإرشادية | اتصل بنا</p>
+        <div>icons of twitter and youtube and linkedin</div>
+        <p>تدعم منصة اعتماد المتصفحات التالية icons</p>
+      </section>
+
+      <section>logo1 logo2 logo3</section>
+    </footer>
+  </body>
+</html>
