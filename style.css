@@ -24,27 +24,55 @@ border: 1px solid blue;
 width: 70%;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1 1fr;
+gap:  3px;
+padding: 12px;
 margin: 12px ;
 border: 5px solid blue;
+overflow: hidden; 
+justify-content: space-between; /* Align grid items to the start of the container */
+
 }
 .hidden-sorting button{
     grid-column: 3/4;
-    width: 50px;
+    width: 30px;
     margin:    10px ;    /* Add margin between buttons */
-    
+    font-size: 10px;
 }
 
 .hidden-sorting h2 , h3 {
-    grid-column: 1/4;
-    margin: 0;
-    padding: 0;
+    grid-column: 1/2;
+    padding: 10px;
+    margin-top: 0px; 
+    grid-row: 1/2;   margin-right: 20px;
+    gap: 10px;
 }
+
+
+ h3{
+     margin-top: 3rem;
+}
+.arabic-form, .english-form{
+    grid-row: 4/4;
+}
+/* .hidden-sorting-search , .hidden-sorting-reset{
+    grid-row: 4/5;
+    text-align: center;
+} */
+
+.hidden-sorting-search{
+    border: 2px solid red;
+    align-items: start;
+}
+
+
+
 
 
 /* table styling */
 .table-section{
     width: 70%;
-    border: 5px solid red;
+    /* border: 5px solid red; */
 }
 table {
   direction: rtl;
@@ -52,13 +80,16 @@ table {
   counter-reset: none;
   align-self: center;
   width: 100%;
+  border: 1px solid #ddd;
 }
 th {
     cursor: pointer;
-    
+    background-color: green ; /* Background color for header row */
+    padding: 10px; /* Padding inside header cells */
+    border: 1px solid #ddd; /* Border around header cells */
   }
 thead {
-  background-color: green;
+  /* background-color: green; */
   color: white;
   text-align: right;
 }
@@ -67,14 +98,37 @@ tbody tr {
 }
 tbody tr::before {
   content: counter(rowNumber); /* Display the counter content before each row */
-  display: table-cell; /* Make it behave like a table cell */
+  display: table-cell;  /*Make it behave like a table cell */
   /* text-align: center; Center the content */
 }
-td {
-  border: 2px solid black;
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row background color */
 }
 
+/* Different shade for even rows */
+tbody tr:nth-child(odd) {
+    background-color: #e6e6e6; /* Different shade for odd rows */
+}
 td time:last-child{
     display: block;
     color: gray;
+}
+
+
+
+header{
+    background-color: white;
+    height: 120px;
+    font-size: 10px;
+    width: 50%;
+    /* align-items: center; */
+}
+/* footer styling */
+footer{
+    background-color: white;
+    height: 120px;
+    font-size: 10px;
+    width: 50%;
+    /* align-items: center; */
 }
