@@ -7,7 +7,6 @@
   </head>
   <body>
     <link rel="stylesheet" href="style.css" />
-    <style></style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -16,19 +15,19 @@
       referrerpolicy="no-referrer"
     />
     <header>
-      <h1>
-        <a href=""
-          ><span class="fa-solid fa-terminal" aria-hidden="true"></span>
-          <span>اعتماد</span>
-        </a>
-      </h1>
-
-      <div>
+      <div class="header-container right">
+        <h1>
+          <a href=""
+            ><span class="fa-solid fa-terminal" aria-hidden="true"></span>
+            <span>اعتماد</span>
+          </a>
+        </h1>
+      </div>
+      <div class="header-container left">
         <a href="">موظف إدارة الاشتراكات</a>
         <a href="">دعم الاعمال </a>
         <h4 class="user-name">خالد عبدالله الصافي</h4>
-      </div>
-      <div>
+     
         <button>messages icon</button>
         <button>bill icon</button>
         <button>settings icon</button>
@@ -44,20 +43,21 @@
     <section class="page-title">
       <button class="create-new">إانشاء نموذج باقة جديدة +</button>
       <h2 id="page-title-h2">إدارة الباقات(يتغير)</h2>
-    </section>
+    
     <hr />
 
     <button
-      class="hidden-sorting-showingbutton"
+      id="hidden-sorting-showingbutton"
       style="width: 90px; height: 20px"
     >
       icon to show
     </button>
+    </section>
     <!--needs to add event listener to show hidden section when presses-->
     <section class="hidden-sorting">
       <button class="hidden-sorting-closingbutton">icon to hide</button>
       <h2 class="title">التصفية</h2>
-
+        
       <h3>التصفيات النشطة</h3>
 
       <div class="arabic-form">
@@ -76,7 +76,7 @@
           placeholder="ابحث بإسم الباقة بالإنجليزية "
         />
       </div>
-
+      
       <div class="hidden-buttons">
         <button class="hidden-sorting-reset">إعادة التعيين</button>
         <button class="hidden-sorting-search">بحث</button>
@@ -145,20 +145,39 @@
     </section>
 
     <footer>
-      <section>
-        <h2>جميع الحقوق محفوظة لوزارة المالية - اعتماد ا2021</h2>
-        <p>تحتاج مساعدة؟ 1990 | البوابة الإرشادية | اتصل بنا</p>
-        <div>icons of twitter and youtube and linkedin</div>
-        <p>تدعم منصة اعتماد المتصفحات التالية icons</p>
-      </section>
-
-      <section class="footer-logos">
-        <ul>
-          <li><img src="imgholder.webp" alt="" style="width: 50px; height: 50px;"></li>
-          <li><img src="imgholder.webp" alt="" style="width: 50px; height: 50px;"></li>
-          <li><img src="imgholder.webp" alt="" style="width: 50px; height: 50px;"></li>
-        </ul>
-      </section>
+      <div class="footer-container">
+        <section class="footer-section right">
+          <h2>جميع الحقوق محفوظة لوزارة المالية - اعتماد ا2021</h2>
+          <p>تحتاج مساعدة؟ 1990 | البوابة الإرشادية | اتصل بنا</p>
+          <div>icons of twitter and youtube and linkedin</div>
+          <p>تدعم منصة اعتماد المتصفحات التالية icons</p>
+        </section>
+        <section class="footer-section left">
+          <ul>
+            <li>
+              <img
+                src="imgholder.webp"
+                alt=""
+                style="width: 50px; height: 50px"
+              />
+            </li>
+            <li>
+              <img
+                src="imgholder.webp"
+                alt=""
+                style="width: 50px; height: 50px"
+              />
+            </li>
+            <li>
+              <img
+                src="imgholder.webp"
+                alt=""
+                style="width: 50px; height: 50px"
+              />
+            </li>
+          </ul>
+        </section>
+      </div>
     </footer>
   </body>
 </html>

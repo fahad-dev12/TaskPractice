@@ -1,13 +1,18 @@
 body {
   background-color: antiquewhite;
   direction: rtl;
+  max-width: 900px;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); 
 }
 
 /* buttons styling */
 button{
     background-color: green;
     color: white;
- 
+ width: 30%;
 }
 
 .hidden-sorting-reset{
@@ -17,13 +22,51 @@ border: 1px solid blue;
 }
 
 
+/* header styling  */
+header  {
+  width: 100%;
+  height: 9rem;
+  margin: 0;
+  gap: 1rem ;
+ background-color: #f8f9fa; /* Example background color */
+  padding: 10px; /* Adjust padding as needed */
+  color: rgb(29, 129, 29);
+ font-size: 10px;
+}
+  
+  .header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two equal columns */
+    align-items: center; /* Centers items vertically */
+  }
+  
+  .left {
+    justify-self: end; /* Aligns left section to the start of the column */
+  }
+  
+  .right {
+    justify-self: start; /* Aligns right section to the end of the column */
+  }
+  
+
+/* page-title styling*/
+.page-title{
+display: grid;
+}
+.create-new,#hidden-sorting-showingbutton{
+  justify-self: end;
+}
+
+
+
 
 
 /* hidden filter-section styling */
 .hidden-sorting{
-    background-color: paleturquoise;
+  margin: 2rem;
+   background-color: paleturquoise;
 border: 2px solid red;
-width: 70%;
+width: 100%;
 display: grid;
 grid-template-columns: repeat(3,1fr);
 grid-template-rows: repeat(2,1fr);
@@ -59,7 +102,7 @@ gap: 1rem;
     padding-left: 1rem;
 }
 .hidden-sorting-search,.hidden-sorting-reset{
-    margin-top: 3rem;
+    margin-top: 1rem;
    padding: 5px;
    margin-left: 1rem ;
 }
@@ -71,16 +114,17 @@ gap: 1rem;
 
 /* footer styilng */
 footer  {
+    width: 100%;
+    height: 5rem;
     margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
     gap: 1rem ;
-  
+   background-color: #f8f9fa; /* Example background color */
+    padding: 10px; /* Adjust padding as needed */
+    color: rgb(29, 129, 29);
+   font-size: 10px;
   }
-  footer ul {
-
-      
+  
+  footer ul {      
         list-style-type: none;
         display: flex;
         gap: 0.1rem ;
@@ -88,13 +132,23 @@ footer  {
         align-items: flex-end;
       
   }
+  
+  .footer-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two equal columns */
+    align-items: center; /* Centers items vertically if the footer has a height */
+  }
+  
+  .left {
+    justify-self: end; /* Aligns left section to the start of the column */
+  }
+  
+  .right {
+    justify-self: start; /* Aligns right section to the end of the column */
+  }
+  
 
-
-
-
-li{
-    list-style-type: none;
-}
 .hidden-sorting-search{
     border: 2px solid red;
     align-items: start;
@@ -109,7 +163,8 @@ li{
 
 /* table styling */
 .table-section{
-    width: 70%;
+    width: 100%;
+    margin: 2rem;
     /* border: 5px solid red; */
 }
 table {
@@ -154,19 +209,10 @@ td time:last-child{
 }
 
 
+hr {
+  display: block; /* Ensure the <hr> is visible */
 
-header{
-    background-color: white;
-    height: 120px;
-    font-size: 10px;
-    width: 50%;
-    /* align-items: center; */
-}
-/* footer styling */
-footer{
-    background-color: white;
-    height: 120px;
-    font-size: 10px;
-    width: 50%;
-    /* align-items: center; */
-}
+    height: 1px; /* Standard height for an <hr> */
+    width: 100%; /* Full width of the parent container */
+  }
+  
