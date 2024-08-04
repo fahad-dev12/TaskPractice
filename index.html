@@ -55,31 +55,32 @@
     </button>
     <!--needs to add event listener to show hidden section when presses-->
     <section class="hidden-sorting">
-        <button class="hidden-sorting-closingbutton">icon to hide</button>
-        <h2 class="title">التصفية</h2>
+      <button class="hidden-sorting-closingbutton">icon to hide</button>
+      <h2 class="title">التصفية</h2>
 
-        <h3>التصفيات النشطة</h3>
+      <h3>التصفيات النشطة</h3>
 
-        <hr>
-        <div class="arabic-form">
-            <h4>اسم النموذج باللغة العربية</h4>
-            <input
-            type="text"
-            id="name-of-form-ar"
-            placeholder="ابحث بإسم الباقة بالعربية "
-            />
-        </div>
-        <div class="english-form">
-            <h4>اسم النموذج باللغة الإنجليزية</h4>
-            <input
-            type="text"
-            id="name-of-form-en"
-            placeholder="ابحث بإسم الباقة بالإنجليزية "
-            />
-        </div>
+      <div class="arabic-form">
+        <label>اسم النموذج باللغة العربية</label>
+        <input
+          type="text"
+          id="name-of-form-ar"
+          placeholder="ابحث بإسم الباقة بالعربية "
+        />
+      </div>
+      <div class="english-form">
+        <label>اسم النموذج باللغة الإنجليزية</label>
+        <input
+          type="text"
+          id="name-of-form-en"
+          placeholder="ابحث بإسم الباقة بالإنجليزية "
+        />
+      </div>
 
-        <button class="hidden-sorting-search">بحث</button>
+      <div class="hidden-buttons">
         <button class="hidden-sorting-reset">إعادة التعيين</button>
+        <button class="hidden-sorting-search">بحث</button>
+      </div>
     </section>
 
     <section class="table-section">
@@ -151,7 +152,13 @@
         <p>تدعم منصة اعتماد المتصفحات التالية icons</p>
       </section>
 
-      <section>logo1 logo2 logo3</section>
+      <section class="footer-logos">
+        <ul>
+          <li><img src="imgholder.webp" alt="" style="width: 50px; height: 50px;"></li>
+          <li><img src="imgholder.webp" alt="" style="width: 50px; height: 50px;"></li>
+          <li><img src="imgholder.webp" alt="" style="width: 50px; height: 50px;"></li>
+        </ul>
+      </section>
     </footer>
   </body>
 </html>

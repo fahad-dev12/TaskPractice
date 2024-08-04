@@ -21,49 +21,86 @@ border: 1px solid blue;
 
 /* hidden filter-section styling */
 .hidden-sorting{
+    background-color: paleturquoise;
+border: 2px solid red;
 width: 70%;
 display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: 1fr 1 1fr;
-gap:  3px;
-padding: 12px;
-margin: 12px ;
-border: 5px solid blue;
-overflow: hidden; 
-justify-content: space-between; /* Align grid items to the start of the container */
-
-}
-.hidden-sorting button{
-    grid-column: 3/4;
-    width: 30px;
-    margin:    10px ;    /* Add margin between buttons */
-    font-size: 10px;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: repeat(2,1fr);
+gap: 1rem;
 }
 
 .hidden-sorting h2 , h3 {
     grid-column: 1/2;
-    padding: 10px;
-    margin-top: 0px; 
+    padding: 0px;
+    margin-top: 1.5rem; 
     grid-row: 1/2;   margin-right: 20px;
     gap: 10px;
 }
 
 
- h3{
+.hidden-sorting h3{
      margin-top: 3rem;
 }
 .arabic-form, .english-form{
-    grid-row: 4/4;
+    grid-row: 2/3;
+    margin: 0;
+    padding: 0;
+    justify-self: center;
+    align-self: center;
+    width: 50%;
 }
-/* .hidden-sorting-search , .hidden-sorting-reset{
-    grid-row: 4/5;
-    text-align: center;
-} */
 
+
+.hidden-buttons{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    justify-self: end;
+    padding-left: 1rem;
+}
+.hidden-sorting-search,.hidden-sorting-reset{
+    margin-top: 3rem;
+   padding: 5px;
+   margin-left: 1rem ;
+}
+
+
+.hidden-sorting-closingbutton{
+    grid-column: 3/4;
+}
+
+/* footer styilng */
+footer  {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem ;
+  
+  }
+  footer ul {
+
+      
+        list-style-type: none;
+        display: flex;
+        gap: 0.1rem ;
+        justify-content: flex-end;
+        align-items: flex-end;
+      
+  }
+
+
+
+
+li{
+    list-style-type: none;
+}
 .hidden-sorting-search{
     border: 2px solid red;
     align-items: start;
     margin : 0 ; 
+    /* grid-row: 4/5; */
+    grid-column: 4/5;
 }
 
 
