@@ -1,7 +1,7 @@
 body {
   background-color: antiquewhite;
   direction: rtl;
-  max-width: 900px;
+  max-width: 1400px;
   margin: 0;
   position: absolute;
   left: 50%;
@@ -48,6 +48,68 @@ header  {
     justify-self: start; /* Aligns right section to the end of the column */
   }
   
+  
+/* footer styilng */
+footer  {
+  width: 100%;
+  height: 5rem;
+  margin: 0;
+  gap: 1rem ;
+ background-color: #f8f9fa; 
+  padding: 3px; 
+padding-bottom: 1rem;
+  color: rgb(29, 129, 29);
+ font-size: 10px;
+}
+
+footer ul {      
+      list-style-type: none;
+      display: flex;
+      gap: 0.1rem ;
+      justify-content: flex-end;
+      align-items: flex-end;
+    
+}
+
+.footer-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+   align-items: center; /*Centers items vertically if the footer has a height */
+margin: 0;
+}
+
+.left {
+  justify-self: end; /* Aligns left section to the start of the column */
+  grid-column: 3/4;
+}
+.left img{
+  width: 100px;
+  height: 100px;
+}
+.left img:first-of-type{
+  width: 100px;
+  height: 50px;
+}
+.right {
+  grid-column: 1/3;
+  gap: 0.1rem;
+  justify-self: start; /* Aligns right section to the end of the column */
+}
+
+
+.social-media-icons{
+  grid-row: 2/3;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+
+
+
 
 /* page-title styling*/
 .page-title{
@@ -102,9 +164,10 @@ gap: 1rem;
     padding-left: 1rem;
 }
 .hidden-sorting-search,.hidden-sorting-reset{
-    margin-top: 1rem;
+    margin-top: 2.2rem;
    padding: 5px;
    margin-left: 1rem ;
+   width: 70px;
 }
 
 
@@ -119,59 +182,6 @@ gap: 1rem;
   grid-column: 4/5;
   width: 3rem;
 }
-
-/* footer styilng */
-footer  {
-    width: 100%;
-    height: 5rem;
-    margin: 0;
-    gap: 1rem ;
-   background-color: #f8f9fa; 
-    padding: 3px; 
-  padding-bottom: 1rem;
-    color: rgb(29, 129, 29);
-   font-size: 10px;
-  }
-  
-  footer ul {      
-        list-style-type: none;
-        display: flex;
-        gap: 0.1rem ;
-        justify-content: flex-end;
-        align-items: flex-end;
-      
-  }
-  
-  .footer-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Creates two equal columns */
-    align-items: center; /* Centers items vertically if the footer has a height */
-  margin: 0;
-  }
-
-  .left {
-    justify-self: end; /* Aligns left section to the start of the column */
-
-  }
-  .left img{
-    width: 100px;
-    height: 100px;
-  }
-  
-  .right {
-    justify-self: start; /* Aligns right section to the end of the column */
-  
-  }
-  .social-media-icons{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    width: 20px;
-    height: 20px;
-  }
-
-
 
 
 
