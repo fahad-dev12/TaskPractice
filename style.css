@@ -14,7 +14,7 @@ body {
 /* Main content styling */
 main {
   flex: 1; /* Allows main to grow and fill the available space */
-  padding: 20px;
+padding: 0;
   background-color: #f4f4f4;
   max-width: 1000px;
   border: 2px solid blue;
@@ -64,7 +64,7 @@ button {
 
 /* hidden filter-section styling */
 .hidden-sorting {
-  margin: 2rem 0rem;
+  margin: 10% 0 ;
   background-color: white;
   width: 100%;
   display: grid;
@@ -72,8 +72,18 @@ button {
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
   border: 0.1px dotted black;
+  position: relative;
 }
-
+.hidden-sorting::before,
+.hidden-sorting::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: black;
+  z-index: 1;
+}
 .hidden-sorting h2 {
   color: green;
 }
@@ -89,18 +99,15 @@ h3 {
 }
 
 .hidden-sorting h3 {
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
+
 
 .hidden-sorting h3,
 label {
   color: blue;
 }
 
-.hidden-sorting input {
-  width: 200px;
-  margin-top: 10px;
-}
 
 .arabic-form,
 .english-form {
@@ -112,35 +119,26 @@ label {
   width: 60%;
 }
 
-/* .arabic-form::before,
-.english-form::before {
-  content: " ";
-  position: absolute;
-  background-color: gray;
-  z-index: 0;
-  left: 0px;
-  /* 10px from the left edge of the container 
-  right: 0px;
-  /* 10px from the right edge of the container 
-  height: 1px;
-  width: 10%;
-  margin-top: -50px;
-} */
 
 .hidden-buttons {
   grid-column: 3/4;
   grid-row: 2/3;
-  justify-self: end;
   padding-left: 1rem;
-  /* float: left; */
+  display: flex; /* Use Flexbox inside grid items */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .hidden-sorting-search,
 .hidden-sorting-reset {
-  margin-top: 2.2rem;
   padding: 5px;
-  margin-left: 1rem;
-  width: 70px;
+  margin-left: 1rem; 
+  border-radius: 2%;
+  cursor: pointer;
+  border-radius: 10px; 
+  margin-bottom: 0;
+  
+
 }
 
 .hidden-sorting-closingbutton {
@@ -151,14 +149,15 @@ label {
 }
 
 .hidden-sorting-search {
-  /* border: 2px solid red; */
   align-items: start;
   margin: 0;
-  /* grid-row: 4/5; */
   grid-column: 4/5;
   width: 3rem;
 }
-
+.hidden-sorting input{
+  border: 0;
+  border-bottom: 1px solid gray;
+}
 /* table styling */
 .table-section {
   width: 100%;
@@ -222,12 +221,8 @@ td time:last-child {
 
 hr {
   display: block;
-  /* Ensure the <hr> is visible */
-
   height: 1px;
-  /* Standard height for an <hr> */
   width: 100%;
-  /* Full width of the parent container */
 }
 
 .footer-container {

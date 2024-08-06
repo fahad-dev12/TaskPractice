@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="54px" viewBox="0 0 38 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Certificate-icon</title>
+    <g id="Product-icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="services-icons" transform="translate(-1122.000000, -2787.000000)" stroke-width="2">
+            <g id="Certificate-icon" transform="translate(1109.000000, 2781.000000)">
+                <g id="Group" transform="translate(14.000000, 7.000000)">
+                    <path d="M11.8334788,40.5806471 L2.7177865,40.5806471 C1.21662304,40.5806471 0,39.5964706 0,38.3821176 L0,2.19852941 C0,0.984176471 1.21662304,0 2.7177865,0 L33.0322135,0 C34.533377,0 35.75,0.984176471 35.75,2.19852941 L35.75,23.9123529" id="Stroke-1" stroke="#32AD71"></path>
+                    <line x1="8.08347647" y1="5.99598235" x2="27.9971824" y2="5.99598235" id="Stroke-3" stroke="#F9B122"></line>
+                    <line x1="8.08347647" y1="12.1136294" x2="27.9971824" y2="12.1136294" id="Stroke-5" stroke="#F9B122"></line>
+                    <line x1="8.08347647" y1="18.2312765" x2="27.9971824" y2="18.2312765" id="Stroke-7" stroke="#F9B122"></line>
+                    <line x1="8.08347647" y1="30.4665706" x2="11.4619471" y2="30.4665706" id="Stroke-11" stroke="#F9B122"></line>
+                    <path d="M32.5002294,35.4876294 C32.5002294,39.4296882 29.3045235,42.6246294 25.3624647,42.6246294 C21.4211706,42.6246294 18.2254647,39.4296882 18.2254647,35.4876294 C18.2254647,31.5455706 21.4211706,28.3506294 25.3624647,28.3506294 C29.3045235,28.3506294 32.5002294,31.5455706 32.5002294,35.4876294 Z" id="Stroke-13" stroke="#32AD71"></path>
+                    <polyline id="Stroke-15" stroke="#32AD71" points="29.1524235 42.1903529 29.1524235 51.7499412 25.3625412 48.6995294 21.5734235 51.7499412 21.5734235 42.1903529"></polyline>
+                    <line x1="8.08347647" y1="24.3489235" x2="18.3236529" y2="24.3489235" id="Stroke-9" stroke="#F9B122"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
