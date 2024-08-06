@@ -4,144 +4,142 @@ body {
   max-width: 1400px;
   margin: 0;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%); 
+  /* left: 50%;   */
+  /* transform: translateX(-25%); */
 }
 
 /* buttons styling */
-button{
-    background-color: green;
-    color: white;
- width: 30%;
+button {
+  background-color: green;
+  color: white;
+  
 }
 
-.hidden-sorting-reset{
-background-color: white;
-color: blue;
-border: 1px solid blue;
+.hidden-sorting-reset {
+  background-color: white;
+  color: blue;
+  border: 1px solid blue;
 }
-
-
-/* header styling  */
-header  {
-  width: 100%;
-  height: 9rem;
-  margin: 0;
-  gap: 1rem ;
- background-color: #f8f9fa; /* Example background color */
-  padding: 10px; /* Adjust padding as needed */
-  color: rgb(29, 129, 29);
- font-size: 10px;
-}
-  
-  .header-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Creates two equal columns */
-    align-items: center; /* Centers items vertically */
-  }
-  
-  header .left {
-    justify-self: end; /* Aligns left section to the start of the column */
-  }
-  
-  header .right {
-    justify-self: start; /* Aligns right section to the end of the column */
-  }
-  
-  
-/* footer styilng */
-footer  {
-border: 2px solid red;
-background-color: #afeeee;
-}
-
-.logo{
-  width: 77px;
-  height: 50px;
- 
-}
-
-
-
 
 /* page-title styling*/
-.page-title{
-display: grid;
-}
-.create-new,#hidden-sorting-showingbutton{
-  justify-self: end;
+.page-title {
+  display: flex;
+  /* border: 2px solid red ; */
+  flex-direction: row-reverse; /* Items are arranged from right to left */
+  justify-content: space-between; /* Space out items to opposite sides */
+  padding: 0;
 }
 
+
+.create-new{
+  background-color: green;
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+#hidden-sorting-showingbutton {
+ float: left;
+}
 
 
 /* hidden filter-section styling */
-.hidden-sorting{
-  margin: 2rem;
-   background-color: paleturquoise;
-border: 2px solid red;
-width: 100%;
-display: grid;
-grid-template-columns: repeat(3,1fr);
-grid-template-rows: repeat(2,1fr);
-gap: 1rem;
+.hidden-sorting {
+  margin: 2rem 0rem;
+  background-color: paleturquoise;
+  border: 2px solid red;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+.hidden-sorting h2{
+  color: green;
+}
+.hidden-sorting h2,
+h3 {
+  grid-column: 1/2;
+  padding: 0px;
+  margin-top: 1.5rem;
+  grid-row: 1/2;
+  margin-right: 20px;
+  gap: 10px;
 }
 
-.hidden-sorting h2 , h3 {
-    grid-column: 1/2;
-    padding: 0px;
-    margin-top: 1.5rem; 
-    grid-row: 1/2;   margin-right: 20px;
-    gap: 10px;
+.hidden-sorting h3 {
+  margin-top: 3rem;
+}
+.hidden-sorting h3 , label{
+  color: blue;
+}
+.hidden-sorting input{
+  width: 200px;
+  margin-top: 10px;
+}
+.arabic-form,
+.english-form {
+  grid-row: 2/3;
+  margin: 0;
+  padding: 0;
+  justify-self: center;
+  align-self: center;
+  width: 60%;
+}
+.arabic-form::before,
+.english-form::before{
+  content: ' ';
+position:absolute;  
+  background-color: gray;
+  z-index: 0; 
+  left: 0px; /* 10px from the left edge of the container */
+  right: 0px; /* 10px from the right edge of the container */
+  height: 1px; 
+  width: 100%; 
+  margin-top: -50px;
+}
+.hidden-buttons {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  justify-self: end;
+  padding-left: 1rem;
+  /* float: left; */
+}
+.hidden-sorting-search,
+.hidden-sorting-reset {
+  margin-top: 2.2rem;
+  padding: 5px;
+  margin-left: 1rem;
+  width: 70px;
 }
 
-
-.hidden-sorting h3{
-     margin-top: 3rem;
+.hidden-sorting-closingbutton {
+  grid-column: 3/4;
+  width: 50px;
+  height: 50px;
+  justify-self: end;
 }
-.arabic-form, .english-form{
-    grid-row: 2/3;
-    margin: 0;
-    padding: 0;
-    justify-self: center;
-    align-self: center;
-    width: 60%;
-}
-
-
-.hidden-buttons{
-    grid-column: 3/4;
-    grid-row: 2/3;
-    justify-self: end;
-    padding-left: 1rem;
-}
-.hidden-sorting-search,.hidden-sorting-reset{
-    margin-top: 2.2rem;
-   padding: 5px;
-   margin-left: 1rem ;
-   width: 70px;
-}
-
-
-.hidden-sorting-closingbutton{
-    grid-column: 3/4;
-}
-.hidden-sorting-search{
+.hidden-sorting-search {
   /* border: 2px solid red; */
   align-items: start;
-  margin : 0 ; 
+  margin: 0;
   /* grid-row: 4/5; */
   grid-column: 4/5;
   width: 3rem;
 }
 
-
-
-
 /* table styling */
-.table-section{
-    width: 100%;
-    margin: 2rem;
-    /* border: 5px solid red; */
+.table-section {
+  width: 100%;
+  margin: 2rem 0rem;
+  /* border: 5px solid red; */
 }
 table {
   direction: rtl;
@@ -152,11 +150,11 @@ table {
   border: 1px solid #ddd;
 }
 th {
-    cursor: pointer;
-    background-color: green ; /* Background color for header row */
-    padding: 10px; /* Padding inside header cells */
-    border: 1px solid #ddd; /* Border around header cells */
-  }
+  cursor: pointer;
+  background-color: green; /* Background color for header row */
+  padding: 10px; /* Padding inside header cells */
+  border: 1px solid #ddd; /* Border around header cells */
+}
 thead {
   /* background-color: green; */
   color: white;
@@ -167,28 +165,99 @@ tbody tr {
 }
 tbody tr::before {
   content: counter(rowNumber); /* Display the counter content before each row */
-  display: table-cell;  /*Make it behave like a table cell */
+  display: table-cell; /*Make it behave like a table cell */
   /* text-align: center; Center the content */
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f9f9f9; /* Alternate row background color */
+  background-color: #f9f9f9; /* Alternate row background color */
 }
 
 /* Different shade for even rows */
 tbody tr:nth-child(odd) {
-    background-color: #e6e6e6; /* Different shade for odd rows */
+  background-color: #e6e6e6; /* Different shade for odd rows */
 }
-td time:last-child{
-    display: block;
-    color: gray;
+td time:last-child {
+  display: block;
+  color: gray;
 }
-
 
 hr {
   display: block; /* Ensure the <hr> is visible */
 
-    height: 1px; /* Standard height for an <hr> */
-    width: 100%; /* Full width of the parent container */
-  }
+  height: 1px; /* Standard height for an <hr> */
+  width: 100%; /* Full width of the parent container */
+}
+
+.footer-container {
+  background-color: paleturquoise;
+  border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  color: green;
+  padding: 0;
+}
+
+#copyrights{
+  margin: 0;
+}
+
+.socials {
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.socials img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.browsers {
+  display: flex;
+  margin: 0 0;
+  padding: 0;
+  align-items: center;
+  justify-content: start;
+}
+
+
+.logos {
+  display: flex;
+  flex-direction: row-reverse; /* Items are arranged from right to left */
+  align-items: flex-end; /* Align items at the bottom of the container */
+  margin-left: 10px;
+}
+.logos img {
+  width: 100px;
+  height: 80px;
+  margin: 5px;
+}
+
+
+.header-container{
+display: flex;
+justify-content: space-between;
+}
+.page-logo{
+  background-color: rgb(6, 6, 109);
+  align-items: flex-start;
+}
+.user-info{
+border: 3px dotted blue;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+
+}
+
+.user-icons{
+  background-color: yellowgreen;
   
+}
+
+.user{
+  background-color: rgb(3, 28, 25);
+  color: blue;
+}
