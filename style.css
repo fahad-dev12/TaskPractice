@@ -1,18 +1,17 @@
 body {
-  background-color: antiquewhite;
+  background-color: rgb(235, 226, 226);
   direction: rtl;
   max-width: 1400px;
   margin: 0;
   position: absolute;
-  /* left: 50%;   */
-  /* transform: translateX(-25%); */
+  left: 50%;   
+   transform: translateX(-50%); 
 }
 
 /* buttons styling */
 button {
   background-color: green;
   color: white;
-  
 }
 
 .hidden-sorting-reset {
@@ -24,14 +23,14 @@ button {
 /* page-title styling*/
 .page-title {
   display: flex;
-  /* border: 2px solid red ; */
-  flex-direction: row-reverse; /* Items are arranged from right to left */
-  justify-content: space-between; /* Space out items to opposite sides */
+  flex-direction: row-reverse;
+  /* Items are arranged from right to left */
+  justify-content: space-between;
+  /* Space out items to opposite sides */
   padding: 0;
 }
 
-
-.create-new{
+.create-new {
   background-color: green;
   flex-direction: center;
   align-items: center;
@@ -42,28 +41,27 @@ button {
   padding: 0;
 }
 
-
-
-
 #hidden-sorting-showingbutton {
- float: left;
+  float: left;
 }
-
 
 /* hidden filter-section styling */
 .hidden-sorting {
   margin: 2rem 0rem;
-  background-color: paleturquoise;
-  border: 2px solid red;
+  background-color: white;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
+  border: 0.1px dotted black;
+
 }
-.hidden-sorting h2{
+
+.hidden-sorting h2 {
   color: green;
 }
+
 .hidden-sorting h2,
 h3 {
   grid-column: 1/2;
@@ -77,13 +75,17 @@ h3 {
 .hidden-sorting h3 {
   margin-top: 3rem;
 }
-.hidden-sorting h3 , label{
+
+.hidden-sorting h3,
+label {
   color: blue;
 }
-.hidden-sorting input{
+
+.hidden-sorting input {
   width: 200px;
   margin-top: 10px;
 }
+
 .arabic-form,
 .english-form {
   grid-row: 2/3;
@@ -93,18 +95,22 @@ h3 {
   align-self: center;
   width: 60%;
 }
+
 .arabic-form::before,
-.english-form::before{
-  content: ' ';
-position:absolute;  
+.english-form::before {
+  content: " ";
+  position: absolute;
   background-color: gray;
-  z-index: 0; 
-  left: 0px; /* 10px from the left edge of the container */
-  right: 0px; /* 10px from the right edge of the container */
-  height: 1px; 
-  width: 100%; 
+  z-index: 0;
+  left: 0px;
+  /* 10px from the left edge of the container */
+  right: 0px;
+  /* 10px from the right edge of the container */
+  height: 1px;
+  width: 100%;
   margin-top: -50px;
 }
+
 .hidden-buttons {
   grid-column: 3/4;
   grid-row: 2/3;
@@ -112,6 +118,7 @@ position:absolute;
   padding-left: 1rem;
   /* float: left; */
 }
+
 .hidden-sorting-search,
 .hidden-sorting-reset {
   margin-top: 2.2rem;
@@ -126,6 +133,7 @@ position:absolute;
   height: 50px;
   justify-self: end;
 }
+
 .hidden-sorting-search {
   /* border: 2px solid red; */
   align-items: start;
@@ -141,6 +149,7 @@ position:absolute;
   margin: 2rem 0rem;
   /* border: 5px solid red; */
 }
+
 table {
   direction: rtl;
   text-align: right;
@@ -149,66 +158,82 @@ table {
   width: 100%;
   border: 1px solid #ddd;
 }
+
 th {
   cursor: pointer;
-  background-color: green; /* Background color for header row */
-  padding: 10px; /* Padding inside header cells */
-  border: 1px solid #ddd; /* Border around header cells */
+  background-color: green;
+  /* Background color for header row */
+  padding: 10px;
+  /* Padding inside header cells */
+  border: 1px solid #ddd;
+  /* Border around header cells */
 }
+
 thead {
   /* background-color: green; */
   color: white;
   text-align: right;
 }
+
 tbody tr {
-  counter-increment: rowNumber; /*  counter for each row */
+  counter-increment: rowNumber;
+  /*  counter for each row */
 }
+
 tbody tr::before {
-  content: counter(rowNumber); /* Display the counter content before each row */
-  display: table-cell; /*Make it behave like a table cell */
+  content: counter(rowNumber);
+  /* Display the counter content before each row */
+  display: table-cell;
+  /*Make it behave like a table cell */
   /* text-align: center; Center the content */
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f9f9f9; /* Alternate row background color */
+  background-color: #f9f9f9;
+  /* Alternate row background color */
 }
 
 /* Different shade for even rows */
 tbody tr:nth-child(odd) {
-  background-color: #e6e6e6; /* Different shade for odd rows */
+  background-color: #e6e6e6;
+  /* Different shade for odd rows */
 }
+
 td time:last-child {
   display: block;
   color: gray;
 }
 
 hr {
-  display: block; /* Ensure the <hr> is visible */
+  display: block;
+  /* Ensure the <hr> is visible */
 
-  height: 1px; /* Standard height for an <hr> */
-  width: 100%; /* Full width of the parent container */
+  height: 1px;
+  /* Standard height for an <hr> */
+  width: 100%;
+  /* Full width of the parent container */
 }
 
 .footer-container {
-  background-color: paleturquoise;
-  border: 2px solid red;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   color: green;
   padding: 0;
 }
 
-#copyrights{
+#copyrights {
   margin: 0;
 }
 
 .socials {
-  display: flex;  
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
   padding: 0;
 }
+
 .socials img {
   width: 30px;
   height: 30px;
@@ -223,41 +248,64 @@ hr {
   justify-content: start;
 }
 
-
 .logos {
   display: flex;
-  flex-direction: row-reverse; /* Items are arranged from right to left */
-  align-items: flex-end; /* Align items at the bottom of the container */
+  flex-direction: row-reverse;
+  /* Items are arranged from right to left */
+  align-items: flex-end;
+  /* Align items at the bottom of the container */
   margin-left: 10px;
 }
+
 .logos img {
   width: 100px;
   height: 80px;
   margin: 5px;
 }
 
-
-.header-container{
-display: flex;
-justify-content: space-between;
+.header-container {
+  display: flex;
+  justify-content: space-between;
 }
-.page-logo{
-  background-color: rgb(6, 6, 109);
+
+.page-logo {
+  display: flex;
   align-items: flex-start;
-}
-.user-info{
-border: 3px dotted blue;
-display: grid;
-grid-template-columns: repeat(2,1fr);
-
-}
-
-.user-icons{
-  background-color: yellowgreen;
-  
+  justify-content: center;
+  /* Horizontal alignment */
+  align-items: center;
+  /* Vertical alignment */
+  height: 100px;
+  /* Full viewport height */
+  background-color: white;
 }
 
-.user{
-  background-color: rgb(3, 28, 25);
+.user-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.user-icons {
+  display: flex;
+  justify-content: center;
+  /* Horizontal alignment */
+  align-items: center;
+  /* Vertical alignment */
+  height: 100px;
+  /* Full viewport height */
+  background-color: white;
+}
+
+.user {
   color: blue;
+}
+
+header {
+  /* display: flex; */
+  background-color: white;
+margin: 20px;
+border: 0.1px dotted black;
+width: 115%;
+align-items: center;
+justify-content: center;
 }
