@@ -100,8 +100,15 @@ h3 {
 
 .hidden-sorting h3 {
   margin-top: 5rem;
+  font-size: 20px;
 }
-
+.divider {
+  margin-top: -9rem;
+  grid-column: span 3;
+  border: none;
+  border-top: 2px solid #ddd;
+  
+}
 
 .hidden-sorting h3,
 label {
@@ -243,7 +250,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: revert;
   padding: 0;
 }
 
@@ -255,18 +262,17 @@ hr {
 
 .browsers {
   display: flex;
-  margin: 0 0;
-  padding: 0;
-  align-items: center;
-  justify-content: start;
+}
+.browsers img{
+margin-right: 10px;
 }
 
 .logos {
   display: flex;
   flex-direction: row-reverse;
-  /* Items are arranged from right to left */
+  
   align-items: flex-end;
-  /* Align items at the bottom of the container */
+
   margin-left: 10px;
 }
 
@@ -301,11 +307,8 @@ hr {
 .user-icons {
   display: flex;
   justify-content: center;
-
   align-items: center;
-
   height: 100px;
-
   background-color: white;
 }
 

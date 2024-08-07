@@ -281,9 +281,9 @@ select {
 [type="button"],
 [type="reset"],
 [type="submit"],
-/* button {
+button {
   -webkit-appearance: none;
-} */
+}
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
 [type="submit"]:not(:disabled),
@@ -305,9 +305,9 @@ input[type="radio"] {
 input[type="date"],
 input[type="datetime-local"],
 input[type="month"],
-/* input[type="time"] {
+input[type="time"] {
   -webkit-appearance: none;
-} */
+}
 textarea {
   overflow: auto;
   resize: vertical;
@@ -336,10 +336,10 @@ progress {
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
-/* [type="search"] {
+[type="search"] {
   outline-offset: -2px;
   -webkit-appearance: none;
-} */
+}
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
@@ -4599,9 +4599,9 @@ ul.nav.et-tabs.flex-column li a:hover {
   -webkit-appearance: none;
   margin: 0;
 }
-/* .go-page-pagination .input-pagination input[type="number"] {
-  /* -moz-appearance: none; 
-} */
+.go-page-pagination .input-pagination input[type="number"] {
+  -moz-appearance: none;
+}
 .go-page-pagination .input-pagination button {
   background: 0 0;
   box-shadow: none;
