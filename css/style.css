@@ -4,16 +4,18 @@ body {
   font-family: "Inv Maison Neue", "Maison Neue", -apple-system,
     BlinkMacSystemFont, "Open Sans", open-sans, sans-serif;
 }
-span,
+
 img {
   cursor: pointer;
+}
+span{
+  cursor: pointer;
+text-align: center;
 }
 
 .container {
   display: flex;
   flex-direction: column; /* Stack items vertically */
-  /* border: 3px dotted red; */
-  /* justify-content: center; */
   align-items: center;
 }
 
@@ -22,14 +24,13 @@ main {
   flex: 1; /* Allows main to grow and fill the available space */
   padding: 0;
   background-color: #f9fcfa;
-  /* max-width: 1000px; */
-  /* border: 2px solid blue; */
   margin: 10px;
 }
 
 footer,
 header {
   width: 100%;
+  border-bottom: 1px solid #d4d4d4;
 }
 
 /* buttons styling */
@@ -48,10 +49,7 @@ button {
 .page-title {
   display: flex;
   flex-direction: row-reverse;
-  border: 2px solid red;
   justify-content: space-between;
-  /* Space out items to opposite sides */
-  /* margin-bottom: 0; */
   padding: 0;
 }
 .page-title h2 {
@@ -90,17 +88,6 @@ button {
   /* border: 0.1px dotted black; */
   position: relative;
 }
-.hidden-sorting::before,
-.hidden-sorting::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: black;
-  z-index: 1;
-}
-
 
 .hidden-sorting h2,
 h3 {
@@ -111,13 +98,12 @@ h3 {
   margin-right: 20px;
   gap: 10px;
   font-size: 20px;
-
 }
-.hidden-sorting h2{
+.hidden-sorting h2 {
   font-weight: bold;
   height: 30px;
   width: 60px;
-    color: #0b594c;
+  color: #0b594c;
   margin-top: 2rem;
   margin-bottom: 0;
 }
@@ -166,8 +152,12 @@ label {
   cursor: pointer;
   border-radius: 10px;
   margin-bottom: 0;
-width: 100px;
+  width: 100px;
   /* width: ; */
+  font-weight: bold;
+}
+.hidden-sorting-search{
+  width: 75px;
 }
 
 .icon-close {
@@ -183,8 +173,10 @@ width: 100px;
   margin: 0;
   grid-column: 4/5;
   /* width: 3rem; */
+  
   background-color: #1c8657;
   color: white;
+  border: 0;
 }
 .hidden-sorting input {
   border: 0;
@@ -250,7 +242,12 @@ td time:last-child {
   display: block;
   color: gray;
 }
-
+td:last-child{
+  text-align: center;
+}
+td,tr{
+  border: 1px solid #d4d4d4;
+}
 hr {
   display: block;
   height: 1px;
@@ -284,7 +281,7 @@ hr {
   /* border: 2px solid red; */
   margin: 2px;
 }
-.socials p{
+.socials p {
   height: 4px;
 }
 .socials img {
@@ -295,8 +292,8 @@ hr {
 
 .browsers {
   display: flex;
-  justify-content: flex-start;  /* Align content horizontally at the start */
-  align-items: flex-start; 
+  justify-content: flex-start; /* Align content horizontally at the start */
+  align-items: flex-start;
   /* margin-right: 5px; */
   padding-right: 5px;
 }
@@ -336,60 +333,74 @@ hr {
   justify-content: center;
   /* Horizontal alignment */
   align-items: center;
-  /* Vertical alignment */
   height: 100px;
-  /* Full viewport height */
   background-color: white;
 }
 
 .user-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-left: 40px;
 }
 
 .user-icons {
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 100px;
   background-color: white;
 }
 
 .user {
+  justify-content: flex-end;
+  /* align-self: flex-end; */
   color: blue;
+  margin:10px ;
+  text-align: -webkit-left;
+  padding: 10px;
 }
 
 header {
   background-color: white;
-
-  /* border: 0.1px dotted black; */
+  display: grid;
+  grid-template-rows: repeat(1,1fr);
+  grid-template-columns: repeat(1,1fr);
   width: 100%;
   align-items: center;
   justify-content: center;
 }
+header hr {
+  width: 90%;
+}
 header h4 {
   color: blue;
   margin-top: 1rem;
-  margin-left: 1rem;
+  margin-left: 0rem;
+  font-size: 12px;
+  width: 160px;
+  height: 0;
+  font-weight: bold;
 }
 header h3 {
   color: black;
+  font-size: 14px;
+  width: 100px;
+  /* margin-right: 50px; */
+  height: 0px;
+
 }
 
 .user-icons {
   display: flex;
   margin: 0;
   padding: 0;
-  flex-direction: row; /* Items are ordered left to right */
-  justify-content: flex-start; /* Aligns items to the right */
 }
 
 .user-icons span {
   margin: 5px;
   width: 40px;
   height: 30px;
-  justify-content: center;
-  align-items: center;
+  
+
 }
 .user-icons span:first-child {
   margin-right: 0;
@@ -397,4 +408,70 @@ header h3 {
 .user-icons span:last-child {
   width: 120px;
   margin: 0;
+}
+
+
+.breadcrumb,.breadcrumb-header {
+  font-size: 14px;
+}
+
+.breadcrumb ul , .breadcrumb-header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /* flex-direction: row-reverse; Reverse the order of items */
+}
+
+.breadcrumb li , .breadcrumb-header li{
+  display: inline;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #095d4f;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb li + li::before {
+  content: '   >   '; /* Separator with spaces */
+  color: #6c757d; /* Gray color for separator */
+  margin: 10px;
+}
+
+.breadcrumb li:last-child{
+  /* Optionally, style the last item differently if needed */
+  font-weight: bold;
+  color: #4f8d84; /* Darker color for the last item */
+  cursor: pointer;
+}
+
+.breadcrumb-header li{
+  cursor: pointer;
+  margin: 30px 80px 10px 0 ;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.breadcrumb-header li:last-child{
+  margin-right: 20px;
+}
+
+.breadcrumb-header li:first-child{
+  color: #40b27a;
+}
+
+.breadcrumb-header li:first-child {
+  text-decoration: underline;
+  text-decoration-color: transparent; /* Make the default underline transparent */
+  text-underline-offset: 4px; /* Offset distance */
+  /* background: linear-gradient(to right, green 50%, white 50%); */
+  /* background-clip: text; */
+  /* -webkit-background-clip: text; */
+  /* color: transparent; Make the text itself transparent to show the gradient background */
+
 }
