@@ -1,12 +1,14 @@
 body {
-  background-color: rgb(235, 226, 226);
+  background-color: rgb(247, 245, 245);
   direction: rtl;
 }
+span,img{
+cursor: pointer;}
 .container {
   max-width: 1200px;
   display: flex;
   flex-direction: column; /* Stack items vertically */
-  border: 3px dotted red;
+  /* border: 3px dotted red; */
   /* justify-content: center; */
   align-items: center;
 }
@@ -17,7 +19,7 @@ main {
 padding: 0;
   background-color: #f4f4f4;
   max-width: 1000px;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   margin: 10px;
 
 }
@@ -52,14 +54,16 @@ button {
   flex-direction: center;
   align-items: center;
   justify-content: center;
-  width: 160px;
+  width: auto;
+
   height: 50px;
   margin: 0;
   padding: 0;
 }
 
-#hidden-sorting-showingbutton {
+.icon-filters{
   float: left;
+  margin: 1rem;
 }
 
 /* hidden filter-section styling */
@@ -71,7 +75,7 @@ button {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
-  border: 0.1px dotted black;
+  /* border: 0.1px dotted black; */
   position: relative;
 }
 .hidden-sorting::before,
@@ -140,7 +144,7 @@ label {
 .hidden-sorting-reset {
   padding: 5px;
   margin-left: 1rem; 
-  border-radius: 2%;
+  /* border-radius: 2%; */
   cursor: pointer;
   border-radius: 10px; 
   margin-bottom: 0;
@@ -148,7 +152,8 @@ label {
 
 }
 
-.hidden-sorting-closingbutton {
+.icon-close {
+  margin-top: 1rem;
   grid-column: 3/4;
   width: 50px;
   height: 50px;
@@ -319,8 +324,33 @@ margin-right: 10px;
 header {
   background-color: white;
 
-  border: 0.1px dotted black;
+  /* border: 0.1px dotted black; */
   width: 100%;
   align-items: center;
   justify-content: center;
+}
+header h4{color: blue;
+margin-top: 1rem;  
+margin-left: 1rem;     }
+header h3{color: black;}
+
+.user-icons{
+  display: flex;
+   margin: 0;
+   padding: 0;
+   flex-direction: row; /* Items are ordered left to right */
+   justify-content: flex-start; /* Aligns items to the right */
+}
+
+.user-icons span{
+  margin: 5px;
+  width: 40px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.user-icons span:first-child{margin-right: 0;}
+.user-icons span:last-child{
+  width: 120px;
+  margin: 0;
 }

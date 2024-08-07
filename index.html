@@ -5,148 +5,154 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="./CDN Assets and Styles/CDN Assets and Styles/main.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/main.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  
 </head>
 
 <body>
-  <div class="container">
-  <header>
-    <div class="header-container">
-      <div class="page-logo">
-        <img src="/CDN Assets and Styles/CDN Assets and Styles/images/icons/logo.svg" />
-      </div>
-      <div class="user-info">
-        <div class="user">
-          <h4>موظف إدارة الاشتراكات | دعم الاعمال</h4>
-          <h3>خالد عبدالله الصافي</h3>
-        </div>
-        <div class="user-icons">icons</div>
-      </div>
+  
+      <div class="container">
+   
+
+        <header>
+          <div class="header-container">
+            <div class="page-logo">
+              <img src="images/icons/logo.svg" />
+            </div>
+            <div class="user-info">
+              <div class="user">
+                <h4>موظف إدارة الاشتراكات | دعم الاعمال</h4>
+                <h3>خالد عبدالله الصافي</h3>
+              </div>
+              <div class="user-icons">
+                <span class="icon-mail_outline "></span>
+                <span class="icon-notifications"></span>
+                <span class="icon-settings"></span>
+               <span class="icon-services">منتجات اعتماد</span>
+              </div>
+            </div>
+          </div>
+        </header>
+       
+        <main>
+          <section class="page-title">
+            <button class="create-new">+ إانشاء نموذج باقة جديدة</button>
+            <h2 id="page-title-h2">إدارة الباقات</h2>
+          </section>
+          <hr />
+
+          <span class="icon-filters"></span>
+
+          <section class="hidden-sorting">
+            <span class="icon-close"></span>
+            
+          
+            <h2>التصفية</h2>
+
+            <h3>التصفيات النشطة (0)</h3>
+                <hr class="divider">
+            <div class="arabic-form">
+              <label>اسم النموذج باللغة العربية</label>
+              <input type="text" id="name-of-form-ar" placeholder="ابحث بإسم الباقة بالعربية " />
+            </div>
+            <div class="english-form">
+              <label>اسم النموذج باللغة الإنجليزية</label>
+              <input type="text" id="name-of-form-en" placeholder="ابحث بإسم الباقة بالإنجليزية " />
+            </div>
+
+            <div class="hidden-buttons">
+              <button class="hidden-sorting-reset">إعادة التعيين</button>
+              <button class="hidden-sorting-search">بحث</button>
+            </div>
+          </section>
+
+          <section class="table-section">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>اسم النموذج باللغة العربية</th>
+                  <th>اسم النموذج باللغة الإنجليزية</th>
+                  <th>تاريخ ووقت الانشاء</th>
+                  <th>" "</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>الباقة الاساسية</td>
+                  <td>small entity package</td>
+                  <td>
+                    <time class="date" datetime="01-01-2022">01-01-2022</time>
+                    <time class="time" datetime="2.31pm">2.31م</time>
+                  </td>
+                  <td>Temp</td>
+                </tr>
+                <tr>
+                  <td>الباقة الاساسية</td>
+                  <td>small entity package</td>
+                  <td>
+                    <time class="date" datetime="01-01-2022">01-01-2022</time>
+                    <time class="time" datetime="2.31pm">2.31م</time>
+                  </td>
+                  <td>Temp</td>
+                </tr>
+                <tr>
+                  <td>الباقة الاساسية</td>
+                  <td>small entity package</td>
+                  <td>
+                    <time class="date" datetime="01-01-2022">01-01-2022</time>
+                    <time class="time" datetime="2.31pm">2.31م</time>
+                  </td>
+                  <td>Temp</td>
+                </tr>
+                <tr>
+                  <td>الباقة الاساسية</td>
+                  <td>small entity package</td>
+                  <td>
+                    <time class="date" datetime="01-01-2022">01-01-2022</time>
+                    <time class="time" datetime="2.31pm">2.31م</time>
+                  </td>
+                  <td>Temp</td>
+                </tr>
+                <tr>
+                  <td>الباقة الاساسية</td>
+                  <td>small entity package</td>
+                  <td>
+                    <time class="date" datetime="01-01-2022">01-01-2022</time>
+                    <time class="time" datetime="2.31pm">2.31م</time>
+                  </td>
+                  <td>Temp</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </main>
+        <footer>
+          <section class="footer-container">
+            <div>
+              <h3 id="copyrights">
+                جميع الحقوق محفوظه لوزارة المالية - اعتماد &copy; 2021
+              </h3>
+              <div class="socials">
+                <p>تحتاج مساعدة ؟ <u>19990</u> | البوابة الإرشادية | اتصل بنا</p>
+                <img src="images/x-icon.svg" alt="" />
+                <img src="images/youtube-icon.svg" alt="" />
+                <img src="/images//linkedin-icon.svg" alt="" />
+              </div>
+              <div class="browsers">
+                <p>تدعم منصة اعتماد المتصفحات التالية</p>
+                <img src="images/supported-browsers.svg" alt="" />
+              </div>
+            </div>
+            <div class="logos">
+              <img src="images/icons/2030-vision.svg" alt="" />
+              <img src="images/icons/mini-logo.svg" alt="" />
+              <img src="images/icons/ncgr-logo.png" alt="" />
+            </div>
+          </section>
+        </footer>
     </div>
-  </header>
-
-  <main>
-    <section class="page-title">
-      <button class="create-new">+ إانشاء نموذج باقة جديدة</button>
-      <h2 id="page-title-h2">إدارة الباقات</h2>
-    </section>
-    <hr />
-
-    <button id="hidden-sorting-showingbutton">icon to show</button>
-
-    <section class="hidden-sorting">
-      <button class="hidden-sorting-closingbutton">X</button>
-      
-     
-      <h2>التصفية</h2>
-
-      <h3>التصفيات النشطة (0)</h3>
-          <hr class="divider">
-      <div class="arabic-form">
-        <label>اسم النموذج باللغة العربية</label>
-        <input type="text" id="name-of-form-ar" placeholder="ابحث بإسم الباقة بالعربية " />
-      </div>
-      <div class="english-form">
-        <label>اسم النموذج باللغة الإنجليزية</label>
-        <input type="text" id="name-of-form-en" placeholder="ابحث بإسم الباقة بالإنجليزية " />
-      </div>
-
-      <div class="hidden-buttons">
-        <button class="hidden-sorting-reset">إعادة التعيين</button>
-        <button class="hidden-sorting-search">بحث</button>
-      </div>
-    </section>
-
-    <section class="table-section">
-      <table>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>اسم النموذج باللغة العربية</th>
-            <th>اسم النموذج باللغة الإنجليزية</th>
-            <th>تاريخ ووقت الانشاء</th>
-            <th>" "</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>الباقة الاساسية</td>
-            <td>small entity package</td>
-            <td>
-              <time class="date" datetime="01-01-2022">01-01-2022</time>
-              <time class="time" datetime="2.31pm">2.31م</time>
-            </td>
-            <td>Temp</td>
-          </tr>
-          <tr>
-            <td>الباقة الاساسية</td>
-            <td>small entity package</td>
-            <td>
-              <time class="date" datetime="01-01-2022">01-01-2022</time>
-              <time class="time" datetime="2.31pm">2.31م</time>
-            </td>
-            <td>Temp</td>
-          </tr>
-          <tr>
-            <td>الباقة الاساسية</td>
-            <td>small entity package</td>
-            <td>
-              <time class="date" datetime="01-01-2022">01-01-2022</time>
-              <time class="time" datetime="2.31pm">2.31م</time>
-            </td>
-            <td>Temp</td>
-          </tr>
-          <tr>
-            <td>الباقة الاساسية</td>
-            <td>small entity package</td>
-            <td>
-              <time class="date" datetime="01-01-2022">01-01-2022</time>
-              <time class="time" datetime="2.31pm">2.31م</time>
-            </td>
-            <td>Temp</td>
-          </tr>
-          <tr>
-            <td>الباقة الاساسية</td>
-            <td>small entity package</td>
-            <td>
-              <time class="date" datetime="01-01-2022">01-01-2022</time>
-              <time class="time" datetime="2.31pm">2.31م</time>
-            </td>
-            <td>Temp</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
-  <footer>
-    <section class="footer-container">
-      <div>
-        <h3 id="copyrights">
-          جميع الحقوق محفوظه لوزارة المالية - اعتماد &copy; 2021
-        </h3>
-        <div class="socials">
-          <p>تحتاج مساعدة ؟ <u>19990</u> | البوابة الإرشادية | اتصل بنا</p>
-          <img src="/CDN Assets and Styles/CDN Assets and Styles/images/x-icon.svg" alt="" />
-          <img src="/CDN Assets and Styles/CDN Assets and Styles/images/youtube-icon.svg" alt="" />
-          <img src="/CDN Assets and Styles/CDN Assets and Styles/images//linkedin-icon.svg" alt="" />
-        </div>
-        <div class="browsers">
-          <p>تدعم منصة اعتماد المتصفحات التالية</p>
-          <img src="/CDN Assets and Styles/CDN Assets and Styles/images/supported-browsers.svg" alt="" />
-        </div>
-      </div>
-      <div class="logos">
-        <img src="/CDN Assets and Styles/CDN Assets and Styles/images/icons/2030-vision.svg" alt="" />
-        <img src="/CDN Assets and Styles/CDN Assets and Styles/images/icons/mini-logo.svg" alt="" />
-        <img src="/CDN Assets and Styles/CDN Assets and Styles/images/icons/ncgr-logo.png" alt="" />
-      </div>
-    </section>
-  </footer>
-</div>
 </body>
 
 </html>
