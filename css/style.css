@@ -29,8 +29,7 @@ main {
 
 footer,
 header {
-  width: 100%;
-  border-bottom: 1px solid #d4d4d4;
+  width: 120%;
 }
 
 /* buttons styling */
@@ -282,23 +281,25 @@ hr {
   margin: 2px;
 }
 .socials p {
-  height: 4px;
+  height: 3px;
 }
 .socials img {
-  height: 20px;
+  height: 15px;
   /* height: 30px; */
   margin-right: 5px;
+
 }
 
 .browsers {
   display: flex;
   justify-content: flex-start; /* Align content horizontally at the start */
-  align-items: flex-start;
+  align-items: center;
   /* margin-right: 5px; */
   padding-right: 5px;
 }
 .browsers p {
   /* margin: 0; */
+  height: 3px;
   justify-content: center;
   align-self: center;
   margin-right: 22px;
@@ -306,7 +307,7 @@ hr {
 }
 .browsers img {
   /* margin-right: 10px; */
-  width: 70px;
+  width: 65px;
 }
 
 .logos {
@@ -364,12 +365,12 @@ header {
   display: grid;
   grid-template-rows: repeat(1,1fr);
   grid-template-columns: repeat(1,1fr);
-  width: 100%;
   align-items: center;
   justify-content: center;
+padding-right: 6%;
 }
 header hr {
-  width: 90%;
+  width: 95%;
 }
 header h4 {
   color: blue;
@@ -465,13 +466,70 @@ header h3 {
   color: #40b27a;
 }
 
-.breadcrumb-header li:first-child {
-  text-decoration: underline;
-  text-decoration-color: transparent; /* Make the default underline transparent */
-  text-underline-offset: 4px; /* Offset distance */
-  /* background: linear-gradient(to right, green 50%, white 50%); */
-  /* background-clip: text; */
-  /* -webkit-background-clip: text; */
-  /* color: transparent; Make the text itself transparent to show the gradient background */
 
+.breadcrumb-header li:first-child {
+  text-decoration: #37ae74 underline;
+  text-underline-offset: 17.5px; /* Offset distance */
+  
+} 
+/* 
+.breadcrumb-header li:first-child::after {
+  content: ' ';
+  position: absolute;
+  right: 150px;
+  bottom: 836px; /* Adjust this value to create the offset 
+  width: 10%;
+  height: 2px; /* Thickness of the underline 
+  background: linear-gradient( green 50%, white 50%);
+} */
+
+
+/*  styles for pagination */
+.pagination {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  flex-direction: row-reverse; /* Reverse the order of pagination items */
+}
+
+.page-item {
+  display: inline-block;
+  padding: 6px 9px;
+  margin: 0 5px;
+  text-decoration: none;
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-item:hover {
+  background-color: #005b4e;
+  color: white; /* White text color on hover */
+}
+
+.page-item.active {
+  background-color: #005b4e;
+  color: white; /* White text color for the active page */
+  border: 1px solid #005b4e; /* Same color border as background */
+}
+
+/* Styling for the first and last items (previous and next) */
+.page-item:first-child {
+  /* background-color: transparent; */
+  color: #5bbc8d;
+  border-radius: 4px 0 0 4px; /* Rounded corners for first item in reversed order */
+}
+
+.page-item:last-child {
+  border-radius: 0 4px 4px 0; /* Rounded corners for last item in reversed order */
+}
+
+/* Disabled state */
+.page-item.disabled {
+  color: #d2d2d2; /* Gray color for disabled state */
+  border-color: #d2d2d2;
+  pointer-events: none; /* Prevent clicking */
+  cursor: not-allowed; /* Change cursor to indicate disabled state */
 }
