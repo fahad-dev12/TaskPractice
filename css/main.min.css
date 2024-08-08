@@ -13364,11 +13364,11 @@ div.heading-with-subtitle-without-border {
 }
 @font-face {
   font-family: "DINNextLT";
-  src: url(../fonts/DINNextLTW23-Light.eot);
-  src: url(../fonts/DINNextLTW23-Light.eot?#iefix) format("embedded-opentype"),
-    url(../fonts/DINNextLTW23-Light.woff2) format("woff2"),
-    url(../fonts/DINNextLTW23-Light.woff) format("woff"),
-    url(../fonts/DINNextLTW23-Light.ttf) format("truetype");
+  src: url(/fonts/DINNextLTW23-Light.eot);
+  src: url(/fonts/DINNextLTW23-Light.eot?#iefix) format("embedded-opentype"),
+    url(/fonts/DINNextLTW23-Light.woff2) format("woff2"),
+    url(/fonts/DINNextLTW23-Light.woff) format("woff"),
+    url(/fonts/DINNextLTW23-Light.ttf) format("truetype");
   -fs-pdf-font-embed: embed;
   -fs-pdf-font-encoding: Identity-H;
   font-weight: 300;

@@ -1,182 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="./css/main.min.css" />
-  <link rel="stylesheet" href="/css/style.css" />
-  
-</head>
-
-<body>
-  
-      <div class="container">
-   
-
-        <header class="Regular shadow">
-                    <div class="header-container">
-                      <div class="page-logo">
-                        <img src="images/icons/logo.svg" />
-                      </div>
-                      <div class="user-info">
-                        <div class="user">
-                          <h4>موظف إدارة الاشتراكات | دعم الاعمال</h4>
-                          <h3>خالد عبدالله الصافي</h3>
-                        </div>
-                        <div class="user-icons">
-                          <span class="icon-mail_outline Larger shadow 7"></span>
-                          <span class="icon-notifications Larger shadow 7"></span>
-                          <span class="icon-settings Larger shadow 7"></span>
-                        <span class="icon-services Larger shadow 7">  منتجات اعتماد </span>
-                        </div>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="breadcrumb-header">
-                      <ul>
-                      <li><a>إدارة الباقات</a></li>
-                      <li><a>إدارة الاشتراكات</a></li>
-                    </ul>
-                  </div>
-        </header>
-       
-        <main>
-          <nav class="breadcrumb">
-            <ul>
-              <li><a href="#">خدمات اعتماد </a></li>
-              <li><a href="#">الاشتراكات</a></li>
-              <li>إدارة الباقات</li>
-              
-            </ul>
-          </nav>
-          <section class="page-title">
-            <button class="create-new">+ إانشاء نموذج باقة جديدة</button>
-            <h2 id="page-title-h2">إدارة الباقات</h2>
-          </section>
-          <hr />
-
-          <span class="icon-filters"></span>
-
-          <section class="hidden-sorting large shadow 9">
-            <span class="icon-close"></span>
-            
-          
-            <h2>التصفية</h2>
-
-            <h3>التصفيات النشطة (0)</h3>
-                <hr class="divider">
-            <div class="arabic-form">
-              <label>اسم النموذج باللغة العربية</label>
-              <input type="text" id="name-of-form-ar" placeholder="ابحث بإسم الباقة بالعربية " />
+  <body>
+      <header class="Regular shadow">
+        <div class="header-container">
+          <div class="page-logo">
+            <img src="images/icons/logo-business.svg" />
+          </div>
+          <div class="user-info">
+            <div class="user">
+              <h4>موظف إدارة الاشتراكات | دعم الاعمال</h4>
+              <h3>خالد عبدالله الصافي</h3>
             </div>
-            <div class="english-form">
-              <label>اسم النموذج باللغة الإنجليزية</label>
-              <input type="text" id="name-of-form-en" placeholder="ابحث بإسم الباقة بالإنجليزية " />
+            <div class="user-icons">
+              <span class="icon-mail_outline Larger shadow 7"></span>
+              <span class="icon-notifications Larger shadow 7"></span>
+              <span class="icon-settings Larger shadow 7"></span>
+              <span class="icon-services Larger shadow 7"> منتجات اعتماد </span>
             </div>
+          </div>
+        </div>
+        <hr />
+        <div class="breadcrumb-header">
+          <ul>
+            <li><a>إدارة الباقات</a></li>
+            <li><a>إدارة الاشتراكات</a></li>
+          </ul>
+        </div>
+      </header>
 
-            <div class="hidden-buttons">
-              <button class="hidden-sorting-reset">إعادة التعيين</button>
-              <button class="hidden-sorting-search">بحث</button>
-            </div>
-          </section>
+      <main>
+        <nav class="breadcrumb">
+          <ul>
+            <li><a href="#">خدمات اعتماد </a></li>
+            <li><a href="#">الاشتراكات</a></li>
+            <li>إدارة الباقات</li>
+          </ul>
+        </nav>
+        <section class="page-title">
+          <button class="create-new">+ إانشاء نموذج باقة جديدة</button>
+          <h2 id="page-title-h2">إدارة الباقات</h2>
+        </section>
+        <hr />
 
-          <section class="table-section">
-            <table>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>اسم النموذج باللغة العربية</th>
-                  <th>اسم النموذج باللغة الإنجليزية</th>
-                  <th>تاريخ ووقت الانشاء</th>
-                  <th>" "</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>الباقة الاساسية</td>
-                  <td>small entity package</td>
-                  <td>
-                    <time class="date" datetime="01-01-2022">01-01-2022</time>
-                    <time class="time" datetime="2.31pm">2.31م</time>
-                  </td>
-                  <td><span class="icon-eye-open large shadow 7"></span></td>
-                </tr>
-                <tr>
-                  <td>الباقة الاساسية</td>
-                  <td>small entity package</td>
-                  <td>
-                    <time class="date" datetime="01-01-2022">01-01-2022</time>
-                    <time class="time" datetime="2.31pm">2.31م</time>
-                  </td>
-                  <td><span class="icon-eye-open large shadow 7"></span></td>
-                </tr>
-                <tr>
-                  <td>الباقة الاساسية</td>
-                  <td>small entity package</td>
-                  <td>
-                    <time class="date" datetime="01-01-2022">01-01-2022</time>
-                    <time class="time" datetime="2.31pm">2.31م</time>
-                  </td>
-                  <td><span class="icon-eye-open large shadow 7"></span></td>
-                </tr>
-                <tr>
-                  <td>الباقة الاساسية</td>
-                  <td>small entity package</td>
-                  <td>
-                    <time class="date" datetime="01-01-2022">01-01-2022</time>
-                    <time class="time" datetime="2.31pm">2.31م</time>
-                  </td>
-                  <td><span class="icon-eye-open large shadow 7"></span></td>
-                </tr>
-                <tr>
-                  <td>الباقة الاساسية</td>
-                  <td>small entity package</td>
-                  <td>
-                    <time class="date" datetime="01-01-2022">01-01-2022</time>
-                    <time class="time" datetime="2.31pm">2.31م</time>
-                  </td>
-                  <td><span class="icon-eye-open large shadow 7"></span></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="pagination">
-              <a href="#" class="page-item">التالي </a>
-              <a href="#" class="page-item">5</a>
-              <a href="#" class="page-item">4</a>
-              <a href="#" class="page-item">3</a>
-              <a href="#" class="page-item">2</a>
-              <a href="#" class="page-item active">1</a>
-              <a href="#" class="page-item disabled"> السابق</a>
-            </div>
-          </section>
-        </main>
-        <footer class="large shadow 7">
-          <section class="footer-container">
-            <div>
-              <h3 id="copyrights">
-                جميع الحقوق محفوظه لوزارة المالية - اعتماد &copy; 2021
-              </h3>
-              <div class="socials">
-                <p>تحتاج مساعدة ؟ <u>19990</u> | البوابة الإرشادية | اتصل بنا | </p>
-                <img src="images/x-icon.svg" alt="" />
-                <img src="images/youtube-icon.svg" alt="" />
-                <img src="/images//linkedin-icon.svg" alt="" />
-              </div>
-              <div class="browsers">
-                <p>تدعم منصة اعتماد المتصفحات التالية</p>
-                <img src="images/supported-browsers.svg" alt="" />
-              </div>
-            </div>
-            <div class="logos">
-              <img src="images/icons/2030-vision.svg" alt="" />
-              <img src="images/icons/mini-logo.svg" alt="" />
-              <img src="images/icons/ncgr-logo.svg" alt="" />
-            </div>
-          </section>
-        </footer>
-    </div>
-</body>
+        <span class="icon-filters large shadow 9"></span>
 
+        <section class="hidden-sorting large shadow 9">
+          <span class="icon-close"></span>
+
+          <h2>التصفية</h2>
+
+          <h3>التصفيات النشطة (0)</h3>
+          <hr class="divider" />
+          <div class="arabic-form">
+            <label>اسم النموذج باللغة العربية</label>
+            <input
+              type="text"
+              id="name-of-form-ar"
+              placeholder="ابحث بإسم الباقة بالعربية "
+            />
+          </div>
+          <div class="english-form">
+            <label>اسم النموذج باللغة الإنجليزية</label>
+            <input
+              type="text"
+              id="name-of-form-en"
+              placeholder="ابحث بإسم الباقة بالإنجليزية "
+            />
+          </div>
+
+          <div class="hidden-buttons">
+            <button class="hidden-sorting-reset">إعادة التعيين</button>
+            <button class="hidden-sorting-search">بحث</button>
+          </div>
+        </section>
+
+        <section class="table-section">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>اسم النموذج باللغة العربية</th>
+                <th>اسم النموذج باللغة الإنجليزية</th>
+                <th>تاريخ ووقت الانشاء</th>
+                <th>" "</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>الباقة الاساسية</td>
+                <td>small entity package</td>
+                <td>
+                  <time class="date" datetime="01-01-2022">01-01-2022</time>
+                  <time class="time" datetime="2.31pm">2.31م</time>
+                </td>
+                <td><span class="icon-eye-open large shadow 7"></span></td>
+              </tr>
+              <tr>
+                <td>الباقة الاساسية</td>
+                <td>small entity package</td>
+                <td>
+                  <time class="date" datetime="01-01-2022">01-01-2022</time>
+                  <time class="time" datetime="2.31pm">2.31م</time>
+                </td>
+                <td><span class="icon-eye-open large shadow 7"></span></td>
+              </tr>
+              <tr>
+                <td>الباقة الاساسية</td>
+                <td>small entity package</td>
+                <td>
+                  <time class="date" datetime="01-01-2022">01-01-2022</time>
+                  <time class="time" datetime="2.31pm">2.31م</time>
+                </td>
+                <td><span class="icon-eye-open large shadow 7"></span></td>
+              </tr>
+              <tr>
+                <td>الباقة الاساسية</td>
+                <td>small entity package</td>
+                <td>
+                  <time class="date" datetime="01-01-2022">01-01-2022</time>
+                  <time class="time" datetime="2.31pm">2.31م</time>
+                </td>
+                <td><span class="icon-eye-open large shadow 7"></span></td>
+              </tr>
+              <tr>
+                <td>الباقة الاساسية</td>
+                <td>small entity package</td>
+                <td>
+                  <time class="date" datetime="01-01-2022">01-01-2022</time>
+                  <time class="time" datetime="2.31pm">2.31م</time>
+                </td>
+                <td><span class="icon-eye-open large shadow 7"></span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="pagination">
+            <a href="#" class="page-item">التالي </a>
+            <a href="#" class="page-item">5</a>
+            <a href="#" class="page-item">4</a>
+            <a href="#" class="page-item">3</a>
+            <a href="#" class="page-item">2</a>
+            <a href="#" class="page-item active">1</a>
+            <a href="#" class="page-item disabled"> السابق</a>
+          </div>
+        </section>
+      </main>
+      <footer class="large shadow 7">
+        <section class="footer-container">
+          <div>
+            <h3 id="copyrights">
+              جميع الحقوق محفوظه لوزارة المالية - اعتماد &copy; 2021
+            </h3>
+            <div class="socials">
+              <p>
+                تحتاج مساعدة ؟ <u>19990</u> | البوابة الإرشادية | اتصل بنا |
+              </p>
+              <img src="images/x-icon.svg" alt="" />
+              <img src="images/youtube-icon.svg" alt="" />
+              <img src="/images//linkedin-icon.svg" alt="" />
+            </div>
+            <div class="browsers">
+              <p>تدعم منصة اعتماد المتصفحات التالية</p>
+              <img src="images/supported-browsers.svg" alt="" />
+            </div>
+          </div>
+          <div class="logos">
+            <img src="images/icons/2030-vision.svg" alt="" />
+            <img src="images/icons/mini-logo.svg" alt="" />
+            <div class="supervision">
+              <p>تحت إشراف</p>
+              <hr class="vertical" />
+            </div>
+            <img src="images/icons/ncgr-logo.svg" alt="" />
+          </div>
+        </section>
+      </footer>
+  </body>
 </html>
