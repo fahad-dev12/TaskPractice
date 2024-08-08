@@ -45,14 +45,14 @@
           </ul>
         </nav>
         <section class="page-title">
-          <button class="create-new">+ إانشاء نموذج باقة جديدة</button>
+          <button class="create-new" id="create-new-button">+ إانشاء نموذج باقة جديدة</button>
           <h2 id="page-title-h2">إدارة الباقات</h2>
         </section>
         <hr />
+        <span class="icon-filters large shadow 9" id="icon-filter" style="width: 50px; height: 30px;"></span>
+       
 
-        <span class="icon-filters large shadow 9"></span>
-
-        <section class="hidden-sorting large shadow 9">
+        <section class="hidden-sorting large shadow 9" id="hidden-section">
           <span class="icon-close"></span>
 
           <h2>التصفية</h2>
@@ -84,8 +84,8 @@
 
         <section class="table-section">
           <table>
-            <thead>
-              <tr>
+            <thead id="table-header">
+              <tr >
                 <th>#</th>
                 <th>اسم النموذج باللغة العربية</th>
                 <th>اسم النموذج باللغة الإنجليزية</th>
@@ -183,4 +183,5 @@
         </section>
       </footer>
   </body>
+  <script src="./script/script.js"></script>
 </html>
