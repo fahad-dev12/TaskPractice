@@ -14,6 +14,7 @@ span {
 header,
 footer {
   width: 100%;
+  z-index: 1;
 }
 .container {
   /* margin: 0; */
@@ -211,7 +212,6 @@ label {
 .table-section {
   width: 100%;
   margin: 2rem 0rem;
-  /* border: 5px solid red; */
 }
 
 table {
@@ -235,37 +235,29 @@ th {
     padding: 10px;
 
 }
-/* 
-tbody tr {
+
+ /* tbody tr {
   counter-increment: rowNumber;
-  /*  counter for each row 
-}
+} 
 
 tbody tr::before {
   content: counter(rowNumber);
-  /* Display the counter content before each row 
   display: table-cell;
-  /* text-align: center; Center the content 
-} */
+}  */
 
 tbody tr:nth-child(even) {
   background-color: #f9fcfa;
-  /* Alternate row background color */
 }
 
-/* Different shade for even rows */
 tbody tr:nth-child(odd) {
   background-color: #ffffff;
-  /* Different shade for odd rows */
 }
-/* 
-td time:last-child {
-  display: block;
-  color: gray;
-}
+
+
+
 td:last-child {
   text-align: center;
-}*/
+}
 td,
 tr {
   border: 1px solid #d4d4d4;
@@ -274,6 +266,17 @@ tr {
 
 td:nth-child(1),td:nth-child(5){
   width: 150px;
+}
+td:nth-child(2),td:nth-child(3){
+  min-height: 200px;
+  max-height: 350px;
+}
+.time {
+  width: 100px;
+  display: block;
+  color: gray;
+  border: 0;
+  text-align: end;
 }
 hr {
   display: block;
@@ -533,11 +536,20 @@ button:hover {
 
 .active {
   background-color: #005b4e;
-  /* border: 3px solid red; */
   color: white; /* White text color for the active page */
   border: 1px solid #005b4e; /* Same color border as background */
   border-radius: 0 4px 4px 0; /* Rounded corners for last item in reversed order */
 
+}
+.notactive {
+  color: #d2d2d2; /* Gray color for disabled state */
+  border-color: 0px #d2d2d2;
+  background-color: transparent;
+  pointer-events: none; /* Prevent clicking */
+  cursor: not-allowed; /* Change cursor to indicate disabled state */
+}
+.notactive:hover{
+  background-color: transparent;
 }
 
 /* Styling for the first and last items (previous and next) */
