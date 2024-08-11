@@ -53,7 +53,7 @@
        
 
         <section class="hidden-sorting large shadow 9" id="hidden-section">
-          <span class="icon-close"></span>
+          <span class="icon-close" id="close-filter"></span>
 
           <h2>التصفية</h2>
 
@@ -83,7 +83,7 @@
         </section>
 
         <section class="table-section">
-          <table>
+          <table id="mytable">
             <thead id="table-header">
               <tr >
                 <th>#</th>
@@ -93,62 +93,11 @@
                 <th>" "</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>الباقة الاساسية</td>
-                <td>small entity package</td>
-                <td>
-                  <time class="date" datetime="01-01-2022">01-01-2022</time>
-                  <time class="time" datetime="2.31pm">2.31م</time>
-                </td>
-                <td><span class="icon-eye-open large shadow 7"></span></td>
-              </tr>
-              <tr>
-                <td>الباقة الاساسية</td>
-                <td>small entity package</td>
-                <td>
-                  <time class="date" datetime="01-01-2022">01-01-2022</time>
-                  <time class="time" datetime="2.31pm">2.31م</time>
-                </td>
-                <td><span class="icon-eye-open large shadow 7"></span></td>
-              </tr>
-              <tr>
-                <td>الباقة الاساسية</td>
-                <td>small entity package</td>
-                <td>
-                  <time class="date" datetime="01-01-2022">01-01-2022</time>
-                  <time class="time" datetime="2.31pm">2.31م</time>
-                </td>
-                <td><span class="icon-eye-open large shadow 7"></span></td>
-              </tr>
-              <tr>
-                <td>الباقة الاساسية</td>
-                <td>small entity package</td>
-                <td>
-                  <time class="date" datetime="01-01-2022">01-01-2022</time>
-                  <time class="time" datetime="2.31pm">2.31م</time>
-                </td>
-                <td><span class="icon-eye-open large shadow 7"></span></td>
-              </tr>
-              <tr>
-                <td>الباقة الاساسية</td>
-                <td>small entity package</td>
-                <td>
-                  <time class="date" datetime="01-01-2022">01-01-2022</time>
-                  <time class="time" datetime="2.31pm">2.31م</time>
-                </td>
-                <td><span class="icon-eye-open large shadow 7"></span></td>
-              </tr>
-            </tbody>
+            <tbody id="forms-tbody">
+              </tbody>
           </table>
-          <div class="pagination">
-            <a href="#" class="page-item">التالي </a>
-            <a href="#" class="page-item">5</a>
-            <a href="#" class="page-item">4</a>
-            <a href="#" class="page-item">3</a>
-            <a href="#" class="page-item">2</a>
-            <a href="#" class="page-item active">1</a>
-            <a href="#" class="page-item disabled"> السابق</a>
+          <div class="pagination"  id="paginationControls">
+            
           </div>
         </section>
       </main>
@@ -162,9 +111,9 @@
               <p>
                 تحتاج مساعدة ؟ <u>19990</u> | البوابة الإرشادية | اتصل بنا |
               </p>
-              <img src="images/x-icon.svg" alt="" />
-              <img src="images/youtube-icon.svg" alt="" />
-              <img src="/images//linkedin-icon.svg" alt="" />
+              <a href="www.x.com"><img src="images/x-icon.svg" alt="x-icon" id="x-icon" /></a>
+              <a href="www.youtube.com"><img src="images/youtube-icon.svg" alt="youtube-icon" id="youtube-icon" /></a>
+              <a href="www.linkedin.com"><img src="/images//linkedin-icon.svg" alt="linkedin-icon" id="linkedin-icon" /></a>
             </div>
             <div class="browsers">
               <p>تدعم منصة اعتماد المتصفحات التالية</p>

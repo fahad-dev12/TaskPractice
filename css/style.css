@@ -40,10 +40,10 @@ main {
   margin: auto;
 }
 /* buttons styling */
-button {
+/* button {
   background-color: #1c8657;
   color: #e3efea;
-}
+} */
 
 .hidden-sorting-reset {
   background-color: #ffffff;
@@ -235,19 +235,18 @@ th {
     padding: 10px;
 
 }
-
+/* 
 tbody tr {
   counter-increment: rowNumber;
-  /*  counter for each row */
+  /*  counter for each row 
 }
 
 tbody tr::before {
   content: counter(rowNumber);
-  /* Display the counter content before each row */
+  /* Display the counter content before each row 
   display: table-cell;
-  /*Make it behave like a table cell */
-  /* text-align: center; Center the content */
-}
+  /* text-align: center; Center the content 
+} */
 
 tbody tr:nth-child(even) {
   background-color: #f9fcfa;
@@ -259,17 +258,22 @@ tbody tr:nth-child(odd) {
   background-color: #ffffff;
   /* Different shade for odd rows */
 }
-
+/* 
 td time:last-child {
   display: block;
   color: gray;
 }
 td:last-child {
   text-align: center;
-}
+}*/
 td,
 tr {
   border: 1px solid #d4d4d4;
+  width: 750px;
+} 
+
+td:nth-child(1),td:nth-child(5){
+  width: 150px;
 }
 hr {
   display: block;
@@ -493,63 +497,63 @@ header h3 {
   text-decoration: #37ae74 underline;
   text-underline-offset: 17.5px; /* Offset distance */
 }
-/* 
-.breadcrumb-header li:first-child::after {
-  content: ' ';
-  position: absolute;
-  right: 150px;
-  bottom: 836px; /* Adjust this value to create the offset 
-  width: 10%;
-  height: 2px; /* Thickness of the underline 
-  background: linear-gradient( green 50%, white 50%);
-} */
 
 /*  styles for pagination */
 .pagination {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   list-style: none;
   padding: 0;
-  margin: 20px 0;
-  flex-direction: row-reverse; /* Reverse the order of pagination items */
+  margin: 20px 5px;
+  flex-direction: row; /* Reverse the order of pagination items */
+  /* border: 2px solid red; */
 }
 
-.page-item {
+
+
+
+
+button
+ {
   display: inline-block;
   padding: 6px 9px;
   margin: 0 5px;
   text-decoration: none;
   border-radius: 4px; /* Rounded corners */
   transition: background-color 0.3s, color 0.3s;
+  border: 0;
+  background-color: transparent;
 }
 
-.page-item:hover {
+button:hover {
   background-color: #005b4e;
   color: white; /* White text color on hover */
 }
 
-.page-item.active {
+.active {
   background-color: #005b4e;
+  /* border: 3px solid red; */
   color: white; /* White text color for the active page */
   border: 1px solid #005b4e; /* Same color border as background */
+  border-radius: 0 4px 4px 0; /* Rounded corners for last item in reversed order */
+
 }
 
 /* Styling for the first and last items (previous and next) */
-.page-item:first-child {
+.prevButton {
   /* background-color: transparent; */
   color: #5bbc8d;
   border-radius: 4px 0 0 4px; /* Rounded corners for first item in reversed order */
 }
 
-.page-item:last-child {
-  border-radius: 0 4px 4px 0; /* Rounded corners for last item in reversed order */
-}
+
 
 /* Disabled state */
-.page-item.disabled {
+.disabled {
   color: #d2d2d2; /* Gray color for disabled state */
-  border-color: #d2d2d2;
+  border-color: 0px #d2d2d2;
+  background-color: transparent;
   pointer-events: none; /* Prevent clicking */
   cursor: not-allowed; /* Change cursor to indicate disabled state */
 }
@@ -561,5 +565,6 @@ header h3 {
 }
 
 .supervision p {
-  margin-bottom: -14px;
+  margin-bottom: -11px;
+  font-size: 8px;
 }
