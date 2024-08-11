@@ -7,6 +7,12 @@ let filter = document.getElementById("icon-filter");
 let closefilter = document.getElementById("close-filter");
 const now = new Date();
 
+
+
+
+
+
+
 // Function to show elements and change styles
 function show() {
   section.style.display = "grid"; // Change display style
@@ -37,49 +43,50 @@ function fetchData() {
 }
 
 function updateTable() {
-  const tbody = document.querySelector("#forms-tbody");
-  tbody.innerHTML = ""; //delete all existing
-
-  // Calculate start and end index for the current page
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, data.length);
-
-  // Populate table with data for the current page
-  for (let i = startIndex; i < endIndex; i++) {
-    const item = data[i];
-    const row = document.createElement("tr");
-
-    const idcell = document.createElement("td");
-    idcell.textContent = i + 1;
-    row.appendChild(idcell);
-
-    const titleCell = document.createElement("td");
-    titleCell.textContent = item.title;
-    row.appendChild(titleCell);
-
-    const bodycell = document.createElement("td");
-    bodycell.textContent = item.body;
-    row.appendChild(bodycell);
-
-    const date2 = document.createElement("td");
-    date2.textContent = now.toLocaleString();
-    date2.classList.add("time"); // Add the 'time' class to the <td> element
-    row.appendChild(date2); // Append the <td> to the row
-
-    const span = document.createElement("span");
-    span.textContent = "";
-    span.classList.add("icon-eye-open", "large", "shadow", "8");
-    const icon = document.createElement("td");
-    icon.appendChild(span);
-    row.appendChild(icon);
-
-    span.addEventListener("click", () => {
-      alert(JSON.stringify(data[i]));
-    });
-
-    tbody.appendChild(row);
+    const tbody = document.querySelector("#forms-tbody");
+    tbody.innerHTML = ""; // Clear existing rows
+  
+    // Calculate start and end index for the current page
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, data.length);
+  
+    // Populate table with data for the current page
+    for (let i = startIndex; i < endIndex; i++) {
+      const item = data[i];
+      const row = document.createElement("tr");
+  
+      const idcell = document.createElement("td");
+      idcell.textContent = i + 1;
+      row.appendChild(idcell);
+  
+      const titleCell = document.createElement("td");
+      titleCell.textContent = item.title;
+      row.appendChild(titleCell);
+  
+      const bodycell = document.createElement("td");
+      bodycell.textContent = item.body;
+      row.appendChild(bodycell);
+  
+      const date2 = document.createElement("td");
+      date2.textContent = now.toLocaleString();
+      date2.classList.add("time");
+      row.appendChild(date2);
+  
+      const span = document.createElement("span");
+      span.textContent = "";
+      span.classList.add("icon-eye-open", "large", "shadow", "8");
+      const icon = document.createElement("td");
+      icon.appendChild(span);
+      row.appendChild(icon);
+  
+      span.addEventListener("click", () => {
+        alert(JSON.stringify(data[i]));
+      });
+  
+      tbody.appendChild(row);
+    }
   }
-}
+  
 
 function updatePaginationControls() {
   const paginationControls = document.getElementById("paginationControls");
@@ -175,3 +182,36 @@ function addRow() {
 }
 
 create_new.addEventListener("click", addRow);
+
+
+
+
+
+
+
+  document.getElementById('id-cell').addEventListener('click', () => {
+  data.sort((a, b) => a.id - b.id);
+    updateTable();
+    updatePaginationControls;
+    console.log('id-call benn called');
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
