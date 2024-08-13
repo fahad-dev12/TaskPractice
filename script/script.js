@@ -1,4 +1,3 @@
-//  Get the elements
 let create_new = document.getElementById("create-new-button");
 let section = document.getElementById("hidden-section");
 let tableHeader = document.getElementById("table-header");
@@ -7,12 +6,24 @@ let filter = document.getElementById("icon-filter");
 let closefilter = document.getElementById("close-filter");
 const now = new Date();
 
+const dialog = document.getElementById('itemDialog');
+const itemId = document.getElementById('itemId');
+const itemTitle = document.getElementById('itemTitle');
+const itemBody = document.getElementById('itemBody');
+const closeDialog = document.getElementById('closeDialog');
+
+
+const headerId = document.getElementById('header-id');
+const headerTitle = document.getElementById('header-title');
+const headerBody = document.getElementById('header-body');
+const headerDate = document.getElementById('header-date');
 
 
 
-
-
-
+// Add event listener to the close button
+closeDialog.addEventListener('click', () => {
+  dialog.close();
+});
 // Function to show elements and change styles
 function show() {
   section.style.display = "grid"; // Change display style
@@ -30,10 +41,11 @@ closefilter.addEventListener("click", hide);
 
 const ITEMS_PER_PAGE = 5;
 let data = [];
+let shown = []; // This will host the items displayed per page
 let currentPage = 1;
 
 function fetchData() {
-  fetch("https://jsonplaceholder.typicode.com/posts?_limit=18")
+  fetch("https://jsonplaceholder.typicode.com/posts?_limit=12")
     .then((response) => response.json())
     .then((fetchedData) => {
       data = fetchedData;
@@ -43,51 +55,64 @@ function fetchData() {
 }
 
 function updateTable() {
-    const tbody = document.querySelector("#forms-tbody");
-    tbody.innerHTML = ""; // Clear existing rows
-  
-    // Calculate start and end index for the current page
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, data.length);
-  
-    // Populate table with data for the current page
-    for (let i = startIndex; i < endIndex; i++) {
-      const item = data[i];
-      const row = document.createElement("tr");
-  
-      const idcell = document.createElement("td");
-      idcell.textContent = i + 1;
-      row.appendChild(idcell);
-  
-      const titleCell = document.createElement("td");
-      titleCell.textContent = item.title;
-      row.appendChild(titleCell);
-  
-      const bodycell = document.createElement("td");
-      bodycell.textContent = item.body;
-      row.appendChild(bodycell);
-  
-      const date2 = document.createElement("td");
-      date2.textContent = now.toLocaleString();
-      date2.classList.add("time");
-      row.appendChild(date2);
-  
-      const span = document.createElement("span");
-      span.textContent = "";
-      span.classList.add("icon-eye-open", "large", "shadow", "8");
-      const icon = document.createElement("td");
-      icon.appendChild(span);
-      row.appendChild(icon);
-  
-      span.addEventListener("click", () => {
-        alert(JSON.stringify(data[i]));
-      });
-  
-      tbody.appendChild(row);
-    }
-  }
-  
+  const tbody = document.querySelector("#forms-tbody");
+  tbody.innerHTML = ""; // Clear existing rows
 
+  // Calculate start and end index for the current page
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, data.length);
+
+  // Update the shown array with items for the current page
+  shown = data.slice(startIndex, endIndex);
+  // Populate table with data for the current page
+  shown.forEach((item, index) => {
+    const row = document.createElement("tr");
+
+    const indexcell = document.createElement("td");
+    indexcell.textContent = startIndex + index + 1; // Adjust for pagination
+    row.appendChild(indexcell);
+
+    const idcell = document.createElement("td");
+    idcell.textContent = item.id; 
+    row.appendChild(idcell);
+
+    const titleCell = document.createElement("td");
+    titleCell.textContent = item.title;
+    row.appendChild(titleCell);
+
+    const bodycell = document.createElement("td");
+    bodycell.textContent = item.body;
+    row.appendChild(bodycell);
+
+    const date2 = document.createElement("td");
+    date2.textContent = now.toLocaleString();
+    date2.classList.add("time");
+    row.appendChild(date2);
+
+    const span = document.createElement("span");
+    span.textContent = "";
+    span.classList.add("icon-eye-open", "large", "shadow", "8");
+    const icon = document.createElement("td");
+    icon.appendChild(span);
+    row.appendChild(icon);
+
+  // Add event listener to the span
+span.addEventListener('click', () => {
+  // Extract and format the item properties
+  itemId.textContent = `ID: ${JSON.item.id}`;
+  itemTitle.textContent = `Title: ${item.title}`;
+  itemBody.textContent = `Body: ${item.body}`;
+
+  // Show the dialog
+  dialog.showModal();
+});
+
+
+
+
+    tbody.appendChild(row);
+  });
+}
 function updatePaginationControls() {
   const paginationControls = document.getElementById("paginationControls");
   paginationControls.innerHTML = "";
@@ -106,14 +131,10 @@ function updatePaginationControls() {
   const maxPageButtons = 5;
 
   // Calculate the starting page number for the buttons
-  // We want to center the current page in the middle if possible
   let startPage = currentPage - Math.floor(maxPageButtons / 2);
-
-  // Ensure that startPage is at least 1 (we don’t want negative page numbers)
   startPage = Math.max(1, startPage);
 
   // Calculate the ending page number for the buttons
-  // Make sure we don't go beyond the total number of pages
   let endPage = startPage + maxPageButtons - 1;
   endPage = Math.min(totalPages, endPage);
 
@@ -134,11 +155,10 @@ function updatePaginationControls() {
   // Create Next button
   const nextButton = createButton("التالي", () => goToPage(currentPage + 1));
   if (currentPage >= totalPages) {
-    // Disable if on the last page
-    nextButton.classList.add("notactive");
+    nextButton.classList.add("notactive"); // Add 'notactive' class if on the last page
   }
   paginationControls.appendChild(nextButton);
-} // end of update pagination
+}
 
 function createButton(text, onClick) {
   const button = document.createElement("button");
@@ -161,11 +181,13 @@ function goToPage(pageNumber) {
 document.addEventListener("DOMContentLoaded", fetchData);
 
 const newObject = {
-  userId: 2,
-
-  title: "New Title",
-  body: "New Body",
+    "userId": 8,
+    "id": 160,
+    "title": "et praesentium aliquam est",
+    "body": "natus corrupti maxime laudantium et voluptatem laboriosam odit",
+    "completed": false
 };
+
 function addRow() {
   // Push the new object into the data array
   data.push(newObject);
@@ -176,7 +198,7 @@ function addRow() {
     currentPage = totalPages;
   }
 
-  // Update the table and pagination controls
+// Update the table and pagination controls
   updateTable();
   updatePaginationControls();
 }
@@ -185,33 +207,5 @@ create_new.addEventListener("click", addRow);
 
 
 
-
-
-
-
-  document.getElementById('id-cell').addEventListener('click', () => {
-  data.sort((a, b) => a.id - b.id);
-    updateTable();
-    updatePaginationControls;
-    console.log('id-call benn called');
-  });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+headerId.addEventListener("click",function(){shown = shown.reverse();updateTable(); updatePaginationControls();    });
 

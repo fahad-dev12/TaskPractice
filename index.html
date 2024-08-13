@@ -81,15 +81,23 @@
             <button class="hidden-sorting-search">بحث</button>
           </div>
         </section>
-
+        <dialog id="itemDialog">
+          <div id="itemDetails">
+            <p id="itemId"></p>
+            <p id="itemTitle"></p>
+            <p id="itemBody"></p>
+          </div>
+          <button id="closeDialog">Close</button>
+        </dialog>
+        
         <section class="table-section">
           <table id="mytable">
             <thead id="table-header">
               <tr >
-                <th id="id-cell">#</th>
-                <th>اسم النموذج باللغة العربية</th>
-                <th>اسم النموذج باللغة الإنجليزية</th>
-                <th>تاريخ ووقت الانشاء</th>
+                <th id="header-id">ID</th>
+                <th id="header-title">Title</th>
+                <th id="header-body">Body</th>
+                <th id="header-date">Date</th>
                 <th>" "</th>
               </tr>
               
