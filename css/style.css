@@ -264,12 +264,11 @@ tr {
   width: 750px;
 } 
 
-td:nth-child(1),td:nth-child(5){
+td:nth-child(1),td:nth-child(2),td:nth-child(3),td:last-child{
   width: 150px;
 }
-td:nth-child(2),td:nth-child(3){
-  min-height: 200px;
-  max-height: 350px;
+td:nth-child(4),td:nth-child(5){
+  height: 150px;
 }
 .time {
   width: 100px;

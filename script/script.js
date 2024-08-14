@@ -45,7 +45,7 @@ let shown = []; // This will host the items displayed per page
 let currentPage = 1;
 
 function fetchData() {
-  fetch("https://jsonplaceholder.typicode.com/posts?_limit=12")
+  fetch("https://jsonplaceholder.typicode.com/posts")
     .then((response) => response.json())
     .then((fetchedData) => {
       data = fetchedData;
@@ -72,10 +72,17 @@ function updateTable() {
     indexcell.textContent = startIndex + index + 1; // Adjust for pagination
     row.appendChild(indexcell);
 
+   
+
     const idcell = document.createElement("td");
-    idcell.textContent = item.id; 
+    idcell.textContent = item.userId; 
     row.appendChild(idcell);
 
+      const useridcell = document.createElement("td");
+    useridcell.textContent = item.id; 
+    row.appendChild(useridcell);
+
+    
     const titleCell = document.createElement("td");
     titleCell.textContent = item.title;
     row.appendChild(titleCell);
@@ -84,10 +91,10 @@ function updateTable() {
     bodycell.textContent = item.body;
     row.appendChild(bodycell);
 
-    const date2 = document.createElement("td");
-    date2.textContent = now.toLocaleString();
-    date2.classList.add("time");
-    row.appendChild(date2);
+    const date = document.createElement("td");
+    date.textContent = now.toLocaleString();
+    date.classList.add("time");
+    row.appendChild(date);
 
     const span = document.createElement("span");
     span.textContent = "";
@@ -99,15 +106,13 @@ function updateTable() {
   // Add event listener to the span
 span.addEventListener('click', () => {
   // Extract and format the item properties
-  itemId.textContent = `ID: ${JSON.item.id}`;
+  itemId.textContent = `ID: ${item.id}`;
   itemTitle.textContent = `Title: ${item.title}`;
   itemBody.textContent = `Body: ${item.body}`;
 
   // Show the dialog
   dialog.showModal();
 });
-
-
 
 
     tbody.appendChild(row);
@@ -122,7 +127,7 @@ function updatePaginationControls() {
   // Create Previous button
   const prevButton = createButton("السابق", () => goToPage(currentPage - 1));
   if (currentPage === 1) {
-    prevButton.disabled = true; // Disable button if current page is 1
+    // prevButton.disabled = true; // Disable button if current page is 1
     prevButton.classList.add("disabled"); // Add 'disabled' class for styling
   }
   paginationControls.appendChild(prevButton);
