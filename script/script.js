@@ -6,13 +6,11 @@ let filter = document.getElementById("icon-filter");
 let closefilter = document.getElementById("close-filter");
 let create_form = document.getElementById("form-dialog");
 const now = new Date();
-
 const dialog = document.getElementById("itemDialog");
 const itemId = document.getElementById("itemId");
 const itemTitle = document.getElementById("itemTitle");
 const itemBody = document.getElementById("itemBody");
 const closeDialog = document.getElementById("closeDialog");
-
 const headerId = document.getElementById("reverse-button");
 
 // Add event listener to the close button
@@ -38,27 +36,35 @@ const ITEMS_PER_PAGE = 5;
 let data = [];
 let shown = []; // This will contain the items displayed per page
 let currentPage = 1;
+let sortColumn = null; // Column index to sort by
+let sortDirection = 'desc'; // 'asc' or 'desc'
 
 function fetchData() {
-  fetch("https://jsonplaceholder.typicode.com/posts?_limit=7")
-    .then((response) => response.json())
-    .then((fetchedData) => {
+  fetch("https://jsonplaceholder.typicode.com/posts?_limit=10")
+    .then(response => response.json())
+    .then(fetchedData => {
       data = fetchedData;
       updateTable();
       updatePaginationControls();
     });
-}  
+}
+
 const tbody = document.querySelector("#forms-tbody");
 
 function updateTable() {
   tbody.innerHTML = ""; // Clear existing rows
 
   // Calculate start and end index for the current page
-  const startIndex = (currentPage -1 ) * ITEMS_PER_PAGE;
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = Math.min(startIndex + ITEMS_PER_PAGE, data.length);
 
   // Update the shown array with items for the current page
   shown = data.slice(startIndex, endIndex);
+
+  // Sort the shown array if a column is specified
+  if (sortColumn !== null) {
+    sortArray(shown, sortColumn, sortDirection);
+  }
 
   // Populate the table with data for the current page
   populateTable(shown, tbody);
@@ -73,50 +79,51 @@ function populateTable(items, tbody) {
     indexCell.textContent = (currentPage - 1) * ITEMS_PER_PAGE + index + 1; // Adjust for pagination
     row.appendChild(indexCell);
 
-    // ID cell
-    const idCell = document.createElement("td");
-    idCell.textContent = item.userId;
-    row.appendChild(idCell);
-
-    // User ID cell
-    const userIdCell = document.createElement("td");
-    userIdCell.textContent = item.id;
-    row.appendChild(userIdCell);
-
-    // Title cell
-    const titleCell = document.createElement("td");
-    titleCell.textContent = item.title;
-    row.appendChild(titleCell);
-
-    // Body cell
-    const bodyCell = document.createElement("td");
-    bodyCell.textContent = item.body;
-    row.appendChild(bodyCell);
-
-    // Date cell
-    const dateCell = document.createElement("td");
-    dateCell.textContent = now.toLocaleString();
-    dateCell.classList.add("time");
-    row.appendChild(dateCell);
-
-    // Icon cell
-    const iconCell = document.createElement("td");
-    const span = document.createElement("span");
-    span.textContent = "";
-    span.classList.add("icon-eye-open", "large", "shadow", "8");
-    iconCell.appendChild(span);
-    row.appendChild(iconCell);
-
-    // Add event listener to the span
-    span.addEventListener("click", () => {
-      // Extract and format the item properties
-      itemId.textContent = `ID: ${item.id}`;
-      itemTitle.textContent = `Title: ${item.title}`;
-      itemBody.textContent = `Body: ${item.body}`;
-
-      // Show the dialog
-      dialog.showModal();
-    });
+       // ID cell
+       const idCell = document.createElement("td");
+       idCell.textContent = item.userId;
+       row.appendChild(idCell);
+   
+       // User ID cell
+       const userIdCell = document.createElement("td");
+       userIdCell.textContent = item.id;
+       row.appendChild(userIdCell);
+   
+       // Title cell
+       const titleCell = document.createElement("td");
+       titleCell.textContent = item.title;
+       row.appendChild(titleCell);
+   
+       // Body cell
+       const bodyCell = document.createElement("td");
+       bodyCell.textContent = item.body;
+       row.appendChild(bodyCell);
+   
+       // Date cell
+       const dateCell = document.createElement("td");
+       dateCell.textContent = now.toLocaleString();
+       dateCell.classList.add("time");
+       row.appendChild(dateCell);
+   
+       // Icon cell
+       const iconCell = document.createElement("td");
+       const span = document.createElement("span");
+       span.textContent = "";
+       span.classList.add("icon-eye-open", "large", "shadow", "8");
+       iconCell.appendChild(span);
+       row.appendChild(iconCell);
+   
+       // Add event listener to the span
+       span.addEventListener("click", () => {
+        // Extract and format the item properties
+        itemId.textContent = `ID: ${item.id}`;
+        itemTitle.textContent = `Title: ${item.title}`;
+        itemBody.textContent = `Body: ${item.body}`;
+  
+       
+         // Show the dialog
+         dialog.showModal();
+       });
 
     // Append the row to the tbody
     tbody.appendChild(row);
@@ -132,7 +139,6 @@ function updatePaginationControls() {
   // Create Previous button
   const prevButton = createButton("السابق", () => goToPage(currentPage - 1));
   if (currentPage === 1) {
-    // prevButton.disabled = true; // Disable button if current page is 1
     prevButton.classList.add("disabled"); // Add 'disabled' class for styling
   }
   paginationControls.appendChild(prevButton);
@@ -187,6 +193,31 @@ function goToPage(pageNumber) {
   updatePaginationControls();
 }
 
+function sortArray(array, columnIndex, direction) {
+  array.sort((a, b) => {
+    const valA = columnIndex === 1 ? a.userId : columnIndex === 2 ? a.id : columnIndex === 3 ? a.title : a.body;
+    const valB = columnIndex === 1 ? b.userId : columnIndex === 2 ? b.id : columnIndex === 3 ? b.title : b.body;
+
+    if (direction === 'asc') {
+      return valA < valB ? -1 : valA > valB ? 1 : 0;
+    } else {
+      return valA > valB ? -1 : valA < valB ? 1 : 0;
+    }
+  });
+}
+
+// Add sorting event listeners to table headers
+document.querySelectorAll("th").forEach((header, index) => {
+  header.addEventListener("click", () => {
+    // Toggle sorting direction
+    sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+    sortColumn = index; // Set the column index to sort by
+
+    updateTable();
+  });
+});
+
+
 
 
 function addRow(newObject) {
@@ -205,6 +236,32 @@ function addRow(newObject) {
   updateTable();
   updatePaginationControls();
 }
+
+// for sorting testing 
+const newObject1 = {
+  userId: 2,
+  id: 11,
+  title: "a",
+  body: "x"
+};
+const newObject2 = {
+  userId: 2,
+  id: 33,
+  title: "b",
+  body: "c"
+};
+const newObject3 = {
+  userId: 2,
+  id: 22,
+  title: "c",
+  body: "z"
+};
+function str(){
+addRow(newObject1);
+addRow(newObject2);
+addRow(newObject3);
+}
+headerId.addEventListener("click", str);
 
 
 function submitForm() {
